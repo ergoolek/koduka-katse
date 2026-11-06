@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>BESTWEB — Digital Growth Systems</title>
-<meta name="description" content="Websites, marketing, lead generation, CRM and automation working together to help businesses grow.">
+<title>Relay — the handoffs run themselves</title>
+<meta name="description" content="Relay runs the steps between your apps and only pings a person when it matters. Approvals in Slack, automatic retries, 240 apps connected.">
 <meta name="theme-color" content="#000000">
 <!--
   relay · portable.html — the single-file port of getlayers-projects/relay.
@@ -117,13 +117,13 @@ em { font-style: italic; }
   --raw-letter-spacing-minus-1: -0.0625rem;
   --raw-letter-spacing-0-4: 0.025rem;
 
-  --raw-size-page: 90rem; /* BESTWEB frame width, 1440 */
+  --raw-size-page: 90rem; /* Relay frame width, 1440 */
   --raw-size-page-inset: 5rem; /* 80 — every section's content edge */
-  --raw-size-page-1024: 64rem; /* BESTWEB — 1024 frame width (3603:2) */
+  --raw-size-page-1024: 64rem; /* Relay — 1024 frame width (3603:2) */
   --raw-size-page-inset-1024: 3rem; /* 48 — content edge at 1024 (928 wide) */
-  --raw-size-page-768: 48rem; /* BESTWEB — 768 frame width (3832:4407) */
+  --raw-size-page-768: 48rem; /* Relay — 768 frame width (3832:4407) */
   --raw-size-page-inset-768: 2.5rem; /* 40 — content edge at 768 (688 wide) */
-  --raw-size-page-390: 24.375rem; /* BESTWEB — 390 frame width (3893:2) */
+  --raw-size-page-390: 24.375rem; /* Relay — 390 frame width (3893:2) */
   --raw-size-page-inset-390: 1.25rem; /* 20 — content edge at 390 (350 wide) */
   /* extra space between sections — half the frames' ~100–160 gap again, so
      the rhythm is 1.5× Figma's (client call, not in Figma) */
@@ -223,9 +223,9 @@ em { font-style: italic; }
 }
 
 /* Tokens the narrower frames redefine.
-     w1024  ≤ 1200px  "BESTWEB — 1024" 3888:7141
-     w768   ≤ 900px   "BESTWEB — 768"  3832:4407
-     w390   ≤ 580px   "BESTWEB — 390"  3893:2 */
+     w1024  ≤ 1200px  "Relay — 1024" 3888:7141
+     w768   ≤ 900px   "Relay — 768"  3832:4407
+     w390   ≤ 580px   "Relay — 390"  3893:2 */
 @media (width <= 1200px) {
   :root {
     --page-width: var(--raw-size-page-1024);
@@ -300,7 +300,7 @@ html { font-size: min(1.111111vw, 21.333333px); /* 16 * 100 / 1440, ≤ 1920 */ 
 }
 
 /* Statement iris "из лого в лого" (transitions/logo-open, brief t3/t4).
-   The transition writes plain numbers, all 0…1: --pop (the lime BESTWEB logo
+   The transition writes plain numbers, all 0…1: --pop (the lime Relay logo
    appears where the plate's Mark sits), --grow (the plate opened out of it)
    and --flying (the logo has left for 06 Scale); and, measured from the
    plate's own Mark at every width, its centre (--mx, --my) and size (--msize). */
@@ -407,7 +407,7 @@ html[data-preload] [data-preloader] { display: block; }
 .pill-md { height: 2.5rem; font-size: var(--type-label); line-height: var(--line-label); }
 .pill-lg { height: 3rem; font-size: var(--type-body); line-height: var(--line-body); }
 /* LimeCta (lime-cta.tsx): resting = the Figma pill; on hover an ink layer
-   sweeps in from the left and inverts it — label lime, shifted left, the BESTWEB
+   sweeps in from the left and inverts it — label lime, shifted left, the Relay
    chevrons sliding in behind it; a 1px lime stroke fills clockwise. */
 .pill-lime { overflow: hidden; color: var(--on-accent); filter: drop-shadow(var(--elevation-cta)); --fill: 0%; }
 .pill-lime-fill { position: absolute; inset: 0; border-radius: 9999px; background: var(--accent); }
@@ -525,53 +525,10 @@ html[data-preload] [data-preloader] { display: block; }
   font: 500 13px/1.4 ui-monospace, monospace; background: #b3261e; color: #fff; text-align: center;
 }
 </style>
-<style>html{scroll-padding-top:100px}span[aria-disabled="true"]{cursor:default;opacity:.48}span[aria-disabled="true"]:hover{color:inherit!important}@media(max-width:580px){html{scroll-padding-top:72px}}</style><style>
-/* BESTWEB: preserve the original Hero canvas, connector geometry and parallax */
-.hero-title{height:auto!important;overflow:visible!important;white-space:normal!important}
-.hero-title-wrap{height:auto!important;overflow:visible!important}
-.hero-title .display-title-accent{display:block}
-@media(min-width:1201px){
-.hero-title{font-size:clamp(2.45rem,3.45vw,3.15rem)!important;line-height:1.1!important;letter-spacing:-.045em}
-.hero-subhead{top:27rem!important}
-.hero-actions{top:34rem!important}
-.hero-note-wrap{top:38.75rem!important}
-}
-@media(min-width:901px) and (max-width:1200px){
-.hero-title{font-size:clamp(1.85rem,3.4vw,2.55rem)!important;line-height:1.12!important}
-.hero-subhead{top:26rem!important}
-.hero-actions{top:33rem!important}
-.hero-note-wrap{top:37.5rem!important}
-}
-@media(min-width:581px) and (max-width:900px){
-.hero-title{font-size:clamp(1.85rem,4.2vw,2.35rem)!important;line-height:1.08!important}
-.hero-title-wrap{top:5.2rem!important}
-.hero-subhead{top:14rem!important}
-.hero-actions{top:20.5rem!important}
-.hero-note-wrap{top:24.5rem!important}
-}
-@media(max-width:580px){
-.hero-title{font-size:clamp(1.65rem,7.2vw,2.2rem)!important;line-height:1.08!important}
-.hero-title-wrap{top:4.5rem!important}
-.hero-subhead{top:14.5rem!important}
-.hero-actions{top:22.5rem!important}
-.hero-note-wrap{top:30.5rem!important}
-}
-.hero-node-condition,.hero-node-approval,.hero-node-log,.hero-node-trigger{visibility:visible}
-</style><style>
-/* BESTWEB Hero: keep original Relay depth layers and animated flow visible */
-#hero .hero-flow-inner{visibility:visible}
-#hero .hero-node{backface-visibility:hidden;transform-style:preserve-3d}
-#hero .hero-node-title{font-size:clamp(.8rem,1.08vw,1rem);line-height:1.22;overflow-wrap:normal}
-#hero .hero-node-source{font-size:clamp(.68rem,.86vw,.86rem);line-height:1.3}
-#hero .hero-node-approval .hero-node-title{font-size:clamp(.75rem,1vw,.94rem)}
-#hero .hero-tilt{transform-style:preserve-3d;will-change:transform}
-#hero .hero-window{transform-style:preserve-3d}
-@media (max-width:900px){#hero .hero-node-title{font-size:.85rem}#hero .hero-node-source{font-size:.7rem}}
-@media (prefers-reduced-motion:reduce){#hero .hero-tilt{will-change:auto}}
-</style></head>
+</head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
-     BESTWEB tile in the middle; a lime line runs round the edge of the screen
+     Relay tile in the middle; a lime line runs round the edge of the screen
      and how far it has gone is the loading progress. When the ring closes the
      lime floods in from it until the screen is all lime, then folds back
      along the Statement fold (screen → square → tile) into the logo,
@@ -1650,7 +1607,7 @@ html[data-preload] [data-preloader] { display: block; }
     <div class="nav-sheet-bar">
       <a class="nav-brand" href="/">
         <img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/nav/nav-logo-mark.svg" alt="" width="28" height="28">
-        <span class="nav-wordmark">BESTWEB</span>
+        <span class="nav-wordmark">Relay</span>
       </a>
       <button class="nav-menu-btn nav-sheet-close" type="button" aria-label="Close menu">
         <span class="nav-bar-1" aria-hidden="true"></span>
@@ -1660,22 +1617,22 @@ html[data-preload] [data-preloader] { display: block; }
     </div>
     <nav class="nav-sheet-links" aria-label="Primary">
       <ul>
-        <li><a class="nav-sheet-row" href="#product"><span class="nav-sheet-code">PR</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Solutions</span><span class="nav-sheet-note">Websites, marketing, CRM</span></span></a></li>
-        <li><a class="nav-sheet-row" href="#how-it-works"><span class="nav-sheet-code">HW</span><span class="nav-sheet-copy"><span class="nav-sheet-label">How it works</span><span class="nav-sheet-note">From visitor to customer</span></span></a></li>
-        <li><a class="nav-sheet-row" href="#proof"><span class="nav-sheet-code">CU</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Case studies</span><span class="nav-sheet-note">Real projects, real enquiries</span></span></a></li>
-        <li><a class="nav-sheet-row" href="#pricing"><span class="nav-sheet-code">$</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Pricing</span><span class="nav-sheet-note">Choose your growth system</span></span></a></li>
+        <li><a class="nav-sheet-row" href="#product"><span class="nav-sheet-code">PR</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Product</span><span class="nav-sheet-note">Canvas, approvals, run history</span></span></a></li>
+        <li><a class="nav-sheet-row" href="#how-it-works"><span class="nav-sheet-code">HW</span><span class="nav-sheet-copy"><span class="nav-sheet-label">How it works</span><span class="nav-sheet-note">From trigger to answer</span></span></a></li>
+        <li><a class="nav-sheet-row" href="#customers"><span class="nav-sheet-code">CU</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Customers</span><span class="nav-sheet-note">Numbers we did not explain away</span></span></a></li>
+        <li><a class="nav-sheet-row" href="#pricing"><span class="nav-sheet-code">$</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Pricing</span><span class="nav-sheet-note">Pay for runs, not seats</span></span></a></li>
       </ul>
     </nav>
     <div class="nav-sheet-foot">
       <p class="nav-status">
         <span class="nav-dot"><span class="nav-dot-halo" aria-hidden="true"></span><span class="nav-dot-core" aria-hidden="true"></span></span>
-        <span class="nav-status-text">growth systems online</span>
+        <span class="nav-status-text">all systems normal</span>
       </p>
-      <a class="pill pill-lime pill-lg" href="#footer" data-lime-cta data-cursor="none">
+      <a class="pill pill-lime pill-lg" href="#start" data-lime-cta data-cursor="none">
         <span class="pill-lime-fill" aria-hidden="true"></span>
-        <span class="pill-label">Start a project</span>
+        <span class="pill-label">Start free</span>
         <span class="pill-lime-ink" aria-hidden="true">
-          <span class="pill-lime-ink-label">Start a project<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+          <span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
         </span>
         <span class="stroke-ring pill-lime-ring" aria-hidden="true"></span>
       </a>
@@ -1687,26 +1644,26 @@ html[data-preload] [data-preloader] { display: block; }
   <header class="nav-header" data-reveal="fade" data-delay="0">
     <a class="nav-brand" href="/">
       <img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/nav/nav-logo-mark.svg" alt="" width="28" height="28" fetchpriority="high">
-      <span class="nav-wordmark">BESTWEB</span>
+      <span class="nav-wordmark">Relay</span>
     </a>
     <nav class="nav-primary" aria-label="Primary">
       <ul class="nav-links">
-        <li><a href="#product">Solutions</a></li>
+        <li><a href="#product">Product</a></li>
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#proof">Case studies</a></li>
+        <li><a href="#customers">Customers</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
       <p class="nav-status">
         <span class="nav-dot"><span class="nav-dot-halo" aria-hidden="true"></span><span class="nav-dot-core" aria-hidden="true"></span></span>
-        <span class="nav-status-text">growth systems online</span>
+        <span class="nav-status-text">all systems normal</span>
       </p>
-      <a class="pill pill-lime pill-md" href="#footer" data-lime-cta data-cursor="none">
+      <a class="pill pill-lime pill-md" href="#start" data-lime-cta data-cursor="none">
         <span class="pill-lime-fill" aria-hidden="true"></span>
-        <span class="pill-label">Start a project</span>
+        <span class="pill-label">Start free</span>
         <span class="pill-lime-ink" aria-hidden="true">
-          <span class="pill-lime-ink-label">Start a project<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+          <span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
         </span>
         <span class="stroke-ring pill-lime-ring" aria-hidden="true"></span>
       </a>
@@ -2171,7 +2128,7 @@ R.mount(function () {
 .hero-port img { display: block; width: 100%; height: 100%; }
 .hero-port-1 { top: 12.1875rem; left: 10.3125rem; }
 .hero-port-2 { top: 22.1875rem; left: 10.3125rem; }
-.hero-port-3, .hero-flash-modern digital experience { top: 12.1875rem; left: 23.4375rem; }
+.hero-port-3, .hero-flash-condition { top: 12.1875rem; left: 23.4375rem; }
 .hero-port-4, .hero-flash-log { top: 22.1875rem; left: 23.4375rem; }
 .hero-port-5, .hero-flash-approval { top: 17.1875rem; left: 28.4375rem; }
 .hero-flash-trigger, .hero-port-trigger { top: 20rem; left: 52.875rem; }
@@ -2228,7 +2185,7 @@ R.mount(function () {
   .hero-branch-yes { top: 13rem; left: 10.875rem; }
   .hero-branch-no { top: 13rem; left: 18rem; }
   .hero-port { display: none; }
-  .hero-flash-modern digital experience { top: 15.8125rem; left: 8.6875rem; }
+  .hero-flash-condition { top: 15.8125rem; left: 8.6875rem; }
   .hero-flash-log { top: 15.8125rem; left: 22.9375rem; }
   .hero-flash-approval { top: 23.8125rem; left: 15.8125rem; }
   .hero-flash-trigger, .hero-port-trigger { top: 13.3125rem; left: 47.625rem; }
@@ -2272,7 +2229,7 @@ R.mount(function () {
   .hero-port-overhang { display: none; }
   .hero-port-1 { top: 19.375rem; left: 9.3125rem; }
   .hero-port-2 { top: 19.375rem; left: 22.3125rem; }
-  .hero-port-3, .hero-flash-modern digital experience { top: 15.625rem; left: 9.3125rem; }
+  .hero-port-3, .hero-flash-condition { top: 15.625rem; left: 9.3125rem; }
   .hero-port-4, .hero-flash-log { top: 15.625rem; left: 22.3125rem; }
   .hero-port-5, .hero-flash-approval { top: 23.375rem; left: 15.8125rem; }
   .hero-flash-trigger, .hero-port-trigger { top: 33.8125rem; left: 23.75rem; }
@@ -2314,7 +2271,7 @@ R.mount(function () {
   .hero-runs { top: 30rem; left: 1.1875rem; width: 19.375rem; }
 }
 </style>
-<section id="hero" class="hero" aria-label="BESTWEB digital growth system">
+<section id="hero" class="hero" aria-label="The handoffs run themselves.">
   <div class="hero-frame">
     <!-- Window bloom 3488:21056 — follows the cursor by up to 60px -->
     <div class="hero-bloom-layer" data-depth="60">
@@ -2323,42 +2280,42 @@ R.mount(function () {
 
     <!-- Release chip 3488:21930 -->
     <div class="hero-chip-wrap" data-reveal="rise" data-delay="0">
-      <p class="hero-chip"><span class="hero-chip-dot" aria-hidden="true"></span><span class="hero-mono hero-label hero-nowrap hero-chip-text" data-type data-delay="120" data-per="30">DIGITAL GROWTH SYSTEMS</span></p>
+      <p class="hero-chip"><span class="hero-chip-dot" aria-hidden="true"></span><span class="hero-mono hero-label hero-nowrap hero-chip-text" data-type data-delay="120" data-per="30">open beta / 240 apps connected</span></p>
     </div>
 
     <div class="hero-title-wrap" data-reveal="rise" data-delay="70">
-      <h1 class="display-title hero-title" data-focus="10" data-delay="70">Your website should do more than just exist.<em class="display-title-accent"> It should bring you customers.</em></h1>
+      <h1 class="display-title hero-title" data-focus="10" data-delay="70">The handoffs run <em class="display-title-accent">themselves</em>.</h1>
     </div>
 
-    <p class="hero-subhead" data-reveal="fade" data-delay="140">We build the systems behind your digital growth — website, marketing and automation working together to turn attention into enquiries.</p>
+    <p class="hero-subhead" data-reveal="fade" data-delay="140">Relay runs the steps between your apps and only pings a person when it matters.</p>
 
     <div class="hero-actions" data-reveal="rise" data-delay="210">
-      <a class="pill pill-lime pill-lg" href="#footer" data-lime-cta data-cursor="none">
+      <a class="pill pill-lime pill-lg" href="#start" data-lime-cta data-cursor="none">
         <span class="pill-lime-fill" aria-hidden="true"></span>
-        <span class="pill-label">Start a project</span>
+        <span class="pill-label">Start free</span>
         <span class="pill-lime-ink" aria-hidden="true">
-          <span class="pill-lime-ink-label">Start a project<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+          <span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
         </span>
         <span class="stroke-ring pill-lime-ring" aria-hidden="true"></span>
       </a>
-      <a class="pill pill-glass pill-lg" href="#product" data-glass-btn>
+      <a class="pill pill-glass pill-lg" href="#watch" data-glass-btn>
         <span class="stroke-ring pill-glass-ring" aria-hidden="true"></span>
         <img class="hero-play" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-play-icon.svg" alt="" width="16" height="16">
-        See how it works
+        Watch a build, 2 minutes
       </a>
     </div>
 
     <div class="hero-note-wrap" data-reveal="rise" data-delay="280">
-      <div class="hero-note"><p class="hero-mono hero-label hero-nowrap hero-note-text" data-type data-delay="400" data-per="30">strategy / website / marketing / systems</p></div>
+      <div class="hero-note"><p class="hero-mono hero-label hero-nowrap hero-note-text" data-type data-delay="400" data-per="30">free for 14 days / no card / no call with sales </p></div>
       <!-- 1024 (3603:2158): two lines, the second typing on where the first stops -->
       <div class="hero-note-1024">
-        <div class="hero-note-line"><p class="hero-mono hero-label hero-nowrap hero-note-text" data-type data-delay="400" data-per="30">strategy / website / marketing / </p></div>
-        <div class="hero-note-line"><p class="hero-mono hero-label hero-nowrap hero-note-text" data-type data-delay="1660" data-per="30">systems</p></div>
+        <div class="hero-note-line"><p class="hero-mono hero-label hero-nowrap hero-note-text" data-type data-delay="400" data-per="30">free for 14 days / no card / no call with </p></div>
+        <div class="hero-note-line"><p class="hero-mono hero-label hero-nowrap hero-note-text" data-type data-delay="1660" data-per="30">sales</p></div>
       </div>
       <!-- 390 (3893:2158): 12 / 1.3, two centred lines in a 217 column -->
       <div class="hero-note-390">
-        <div class="hero-note-line"><p class="hero-mono hero-nowrap hero-note-text" data-type data-delay="400" data-per="30">strategy / website / </p></div>
-        <div class="hero-note-line"><p class="hero-mono hero-nowrap hero-note-text" data-type data-delay="1270" data-per="30">marketing / systems</p></div>
+        <div class="hero-note-line"><p class="hero-mono hero-nowrap hero-note-text" data-type data-delay="400" data-per="30">free for 14 days / no card / </p></div>
+        <div class="hero-note-line"><p class="hero-mono hero-nowrap hero-note-text" data-type data-delay="1270" data-per="30">no call with sales</p></div>
       </div>
     </div>
 
@@ -2373,7 +2330,7 @@ R.mount(function () {
     <div class="hero-tilt">
       <div class="hero-fill hero-flow-root">
         <div class="hero-fill">
-          <div role="group" aria-label="BESTWEB workflow preview">
+          <div role="group" aria-label="Relay workflow preview">
             <div class="hero-window-box hero-window">
               <div class="hero-fill" data-depth="10">
                 <div class="hero-fill hero-grid-wave" aria-hidden="true">
@@ -2385,9 +2342,9 @@ R.mount(function () {
                 <span class="hero-corner hero-corner-1" aria-hidden="true"></span>
                 <span class="hero-corner hero-corner-2" aria-hidden="true"></span>
                 <span class="hero-corner hero-corner-3" aria-hidden="true"></span>
-                <p class="hero-win-title">Digital growth system</p>
+                <p class="hero-win-title">Refunds over 5000</p>
                 <span class="hero-win-divider" aria-hidden="true"></span>
-                <p class="hero-win-meta hero-mono hero-label hero-nowrap">4 connected layers / 1 system</p>
+                <p class="hero-win-meta hero-mono hero-label hero-nowrap">3 steps / 1 branch</p>
                 <span class="hero-win-rule" aria-hidden="true"></span>
                 <ul class="hero-tools" aria-hidden="true">
                   <li><span class="hero-tool hero-tool-active"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-tool-select.svg" alt="" width="20" height="20"></span></li>
@@ -2432,9 +2389,9 @@ R.mount(function () {
                     <g class="hero-packet-lime" opacity="0"><circle r="6" fill="var(--hero-packet-halo)"/><circle r="2.5" fill="var(--hero-packet)"/></g>
                     <g class="hero-packet-grey" opacity="0"><circle r="5" fill="var(--hero-packet-grey-halo)"/><circle r="2.25" fill="var(--hero-packet-grey)"/></g>
                   </svg>
-                  <div class="hero-node hero-node-glow hero-node-condition" data-node="472"><p class="hero-node-title">Website</p><p class="hero-node-source hero-mono hero-label">modern digital experience</p></div>
-                  <div class="hero-node hero-node-log" data-node="528"><p class="hero-node-title">New enquiry</p><p class="hero-node-source hero-mono hero-label">lead captured</p></div>
-                  <div class="hero-node hero-node-approval" data-node="584"><p class="hero-node-title">Google + Meta Ads</p><p class="hero-node-source hero-mono hero-label">traffic running</p></div>
+                  <div class="hero-node hero-node-glow hero-node-condition" data-node="472"><p class="hero-node-title">Amount over 5000</p><p class="hero-node-source hero-mono hero-label">condition</p></div>
+                  <div class="hero-node hero-node-log" data-node="528"><p class="hero-node-title">Log to warehouse</p><p class="hero-node-source hero-mono hero-label">postgres</p></div>
+                  <div class="hero-node hero-node-approval" data-node="584"><p class="hero-node-title">Ask finance</p><p class="hero-node-source hero-mono hero-label">waiting on a yes</p></div>
                   <div class="hero-wait-wrap" data-reveal="fade" data-delay="654">
                     <p class="hero-wait"><span class="hero-wait-dot" aria-hidden="true"></span><span class="hero-wait-text hero-mono hero-label hero-nowrap">26 min</span></p>
                   </div>
@@ -2442,7 +2399,7 @@ R.mount(function () {
                     <p class="hero-branch hero-branch-yes hero-mono hero-label">true</p>
                     <p class="hero-branch hero-branch-no hero-mono hero-label">else</p>
                   </div>
-                  <span class="hero-flash hero-flash-modern digital experience" data-flash="modern digital experience" aria-hidden="true"></span>
+                  <span class="hero-flash hero-flash-condition" data-flash="condition" aria-hidden="true"></span>
                   <span class="hero-port hero-port-3" data-port="688" aria-hidden="true"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-port.svg" alt="" width="8" height="8"></span>
                   <span class="hero-flash hero-flash-log" data-flash="log" aria-hidden="true"></span>
                   <span class="hero-port hero-port-4" data-port="688" aria-hidden="true"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-port.svg" alt="" width="8" height="8"></span>
@@ -2456,21 +2413,21 @@ R.mount(function () {
               <!-- Last runs -->
               <div class="hero-fill" data-reveal="fade" data-delay="288">
                 <span class="hero-runs-rule" aria-hidden="true"></span>
-                <p class="hero-runs-label hero-mono hero-label hero-nowrap">recent activity</p>
+                <p class="hero-runs-label hero-mono hero-label hero-nowrap">last runs</p>
               </div>
               <ul class="hero-runs hero-mono hero-label">
-                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time">09:41:02</span><span class="hero-run-name">new enquiry</span><span class="hero-run-duration">129 ms</span></li>
-                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:38:57</span><span class="hero-run-name">Google Ads campaign</span><span class="hero-run-duration">2.1 s</span></li>
-                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:31:14</span><span class="hero-run-name">CRM follow-up</span><span class="hero-run-duration">410 ms</span></li>
+                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time">09:41:02</span><span class="hero-run-name">refunds over 5000</span><span class="hero-run-duration">129 ms</span></li>
+                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:38:57</span><span class="hero-run-name">weekly export</span><span class="hero-run-duration">2.1 s</span></li>
+                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:31:14</span><span class="hero-run-name">invoice reminder</span><span class="hero-run-duration">410 ms</span></li>
               </ul>
             </div>
 
             <!-- the window's gradient stroke, a ring over the glass -->
             <span class="hero-window-box hero-window-ring" aria-hidden="true"></span>
 
-            <!-- CRM + its ports, at the flow's depth -->
+            <!-- Refund created + its ports, at the flow's depth -->
             <div class="hero-fill" data-depth="22">
-              <div class="hero-node hero-node-trigger" data-node="416"><p class="hero-node-title">CRM</p><p class="hero-node-source hero-mono hero-label">follow-up active</p></div>
+              <div class="hero-node hero-node-trigger" data-node="416"><p class="hero-node-title">Refund created</p><p class="hero-node-source hero-mono hero-label">stripe</p></div>
               <span class="hero-flash hero-flash-trigger" data-flash="trigger" aria-hidden="true"></span>
               <span class="hero-port hero-port-trigger" data-port="608" aria-hidden="true"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-port.svg" alt="" width="8" height="8"></span>
               <span class="hero-port hero-port-overhang" data-port="416" aria-hidden="true"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-port-overhang.svg" alt="" width="8" height="8"></span>
@@ -2596,7 +2553,7 @@ R.mount(function () {
       s.start({ d: 0 }, { delay: mirror ? LOAD.connectorsIn : LOAD.connectors })
     })
   }
-  R.onReleased(function () { start() })
+  R.onReleased(function () { R.seen(root, start) })
 
   /* ── FlowLive: the packet loop + port flashes ──────────────────────────── */
   var cubic = function (s, t) {
@@ -2621,7 +2578,7 @@ R.mount(function () {
     var t = Math.min(1, Math.max(0, (d - r.len[i - 1]) / span))
     return [r.pts[i - 1][0] + (r.pts[i][0] - r.pts[i - 1][0]) * t, r.pts[i - 1][1] + (r.pts[i][1] - r.pts[i - 1][1]) * t]
   }
-  // 1440: CRM's port → the true / else connector → through the card → into Google + Meta Ads
+  // 1440: Refund created's port → the true / else connector → through the card → into Ask finance
   var branch = function (y) {
     return [
       [[89, 279], [129, 279], [129, y], [169, y]],
@@ -2683,7 +2640,7 @@ R.mount(function () {
     }
     var hits = {
       trigger: 0,
-      modern digital experience: isGrey ? null : easeInv(route.hit / total),
+      condition: isGrey ? null : easeInv(route.hit / total),
       log: isGrey ? easeInv(route.hit / total) : null,
       approval: 1
     }
@@ -2768,8 +2725,8 @@ R.mount(function () {
 :root {
   --raw-integrations-color-tile-to: rgba(255, 255, 255, 0.02); /* App tile gradient end 3488:21966 */
   --raw-integrations-color-tile-border: rgba(255, 255, 255, 0.12); /* App tile border 3488:21966 */
-  --raw-integrations-color-active-border: rgba(200, 247, 81, 0.55); /* App / follow-up active border 3488:21969 */
-  /* App / follow-up active fill 3488:21969: rgba(200,247,81,.18) → #0e0f0d, top → bottom.
+  --raw-integrations-color-active-border: rgba(200, 247, 81, 0.55); /* App / stripe border 3488:21969 */
+  /* App / stripe fill 3488:21969: rgba(200,247,81,.18) → #0e0f0d, top → bottom.
      Figma lerps colour and alpha separately (unpremultiplied); CSS interpolates
      premultiplied, so Figma's own colour is pinned every 12.5% (≤1 level error). */
   --raw-integrations-gradient-active: linear-gradient(
@@ -2860,7 +2817,7 @@ R.mount(function () {
 .integrations-tile-label.is-center { left: 50%; transform: translateX(-50%); text-align: center; }
 /* Figma: last label ends 2px past the tile's right edge at 1440; flush from 1024 down */
 .integrations-tile-label.is-end { right: -0.125rem; text-align: right; }
-/* 1440 draws every tile; 1024 / 768 drop notion and gmail; 390 keeps slack, follow-up active, lead captured, notion */
+/* 1440 draws every tile; 1024 / 768 drop notion and gmail; 390 keeps slack, stripe, postgres, notion */
 
 @media (width <= 1200px) {
   .integrations { height: 13.25rem; }
@@ -2912,8 +2869,8 @@ R.mount(function () {
     </div>
     <ul class="integrations-row" id="integrations-row">
       <li class="integrations-tile" data-app="slack" data-in1024="1" data-in390="1"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">SL</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">SL</span></span></div><span class="integrations-tile-label">slack</span></li>
-      <li class="integrations-tile" data-app="follow-up active" data-in1024="1" data-in390="1" data-active="1"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">ST</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">ST</span></span></div><span class="integrations-tile-label">follow-up active</span></li>
-      <li class="integrations-tile" data-app="lead captured" data-in1024="1" data-in390="1"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">PG</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">PG</span></span></div><span class="integrations-tile-label">lead captured</span></li>
+      <li class="integrations-tile" data-app="stripe" data-in1024="1" data-in390="1" data-active="1"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">ST</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">ST</span></span></div><span class="integrations-tile-label">stripe</span></li>
+      <li class="integrations-tile" data-app="postgres" data-in1024="1" data-in390="1"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">PG</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">PG</span></span></div><span class="integrations-tile-label">postgres</span></li>
       <li class="integrations-tile not-390" data-app="hubspot" data-in1024="1" data-in390="0"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">HS</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">HS</span></span></div><span class="integrations-tile-label">hubspot</span></li>
       <li class="integrations-tile not-1024 in-390" data-app="notion" data-in1024="0" data-in390="1"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">NO</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">NO</span></span></div><span class="integrations-tile-label">notion</span></li>
       <li class="integrations-tile not-1024" data-app="gmail" data-in1024="0" data-in390="0"><div class="integrations-tile-box" aria-hidden="true"><span class="integrations-tile-idle"><span class="integrations-tile-initials">GM</span></span><span class="integrations-tile-active"><span class="integrations-tile-initials">GM</span></span></div><span class="integrations-tile-label">gmail</span></li>
@@ -3584,9 +3541,9 @@ R.mount(function () {
   <header class="section-head product-head">
     <div class="section-head-stack product-head-stack" data-reveal="rise" data-delay="0">
       <span class="badge"><span class="badge-dot" data-pulse="250"></span><span class="badge-label">content service</span></span>
-      <h2 class="display-title product-head-title" data-focus="10" data-delay="70">A website is only one part of the system. <em class="display-title-accent">Growth happens in the connections</em>.</h2>
+      <h2 class="display-title product-head-title" data-focus="10" data-delay="70">Most of a process is <em class="display-title-accent">glue</em>.</h2>
     </div>
-    <p class="section-head-aside product-head-aside" data-focus="8" data-delay="140">Your website, advertising, enquiries and customer data should work together — not live in separate places.</p>
+    <p class="section-head-aside product-head-aside" data-focus="8" data-delay="140">Copy this into that. Check it went through. Ask Dana if it is fine. Relay takes the glue and leaves you the decisions.</p>
   </header>
   <span class="product-hairline" data-drawline data-delay="0" aria-hidden="true"></span>
 
@@ -3595,7 +3552,7 @@ R.mount(function () {
     <div class="product-copy" data-reveal="rise" data-delay="0">
       <p class="product-index" data-roll="01"><span class="sr-only">01</span></p>
       <h3 class="product-row-title" data-focus="8" data-delay="70">One canvas, every branch</h3>
-      <p class="product-body product-body-trace" data-focus="8" data-delay="140">Drop a trigger, add a modern digital experience, split the path. A step that fails at 3am is retried four times.</p>
+      <p class="product-body product-body-trace" data-focus="8" data-delay="140">Drop a trigger, add a condition, split the path. A step that fails at 3am is retried four times.</p>
     </div>
     <div class="product-card-wrap" data-reveal="rise" data-delay="70">
       <figure class="product-card product-trace" id="product-trace">
@@ -3657,7 +3614,7 @@ R.mount(function () {
         <span class="product-approval-typing" aria-hidden="true"><span></span><span></span><span></span></span>
         <div class="product-approval-message">
           <img class="product-approval-avatar" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/product/product-avatar.svg" alt="" width="28" height="28">
-          <p class="product-approval-sender">BESTWEB</p>
+          <p class="product-approval-sender">Relay</p>
           <p class="product-approval-time product-mono">9:41</p>
           <p class="product-approval-text">Refund of 6,400 for Northwind is over your limit. Send it?</p>
         </div>
@@ -4201,11 +4158,11 @@ R.mount(function () {
   </svg>
   <canvas class="statement-dots-canvas" aria-hidden="true"></canvas>
 
-  <p class="statement-kicker"><span class="statement-type" data-hidden data-statement-type="460">[ WHAT WE ARE ACTUALLY BUILDING ]</span></p>
+  <p class="statement-kicker"><span class="statement-type" data-hidden data-statement-type="460">[ what we are actually selling ]</span></p>
 
   <h2 id="statement-title" class="statement-title">
     <span><span class="statement-word" data-word="0">The</span> <span class="statement-word" data-word="1">best</span> <span class="statement-word" data-word="2">workflow</span> <span class="statement-word" data-word="3">is</span> <span class="statement-word" data-word="4">the</span> <span class="statement-word" data-word="5">one</span></span>
-    <span><span class="statement-word statement-word-accent" data-word="8">nobody has to think about</span> <span class="statement-word" data-word="6">in</span> <span class="statement-word" data-word="7">standup.</span></span>
+    <span><span class="statement-word statement-word-accent" data-word="8">nobody mentions</span> <span class="statement-word" data-word="6">in</span> <span class="statement-word" data-word="7">standup.</span></span>
   </h2>
 
   <div class="statement-mark" data-statement-mark="">
@@ -4217,7 +4174,7 @@ R.mount(function () {
   </div>
   <span class="statement-stem" aria-hidden="true"></span>
 
-  <p class="statement-caption"><span class="statement-type" data-hidden data-statement-type="1800">one system, working together</span></p>
+  <p class="statement-caption"><span class="statement-type" data-hidden data-statement-type="1800">one tick, one run</span></p>
   <svg class="statement-ticks" aria-hidden="true" width="1282" height="18" viewBox="0 0 1282 18" fill="none"></svg>
   <p class="statement-now">now</p>
   <span class="statement-dot" aria-hidden="true">
@@ -4800,16 +4757,16 @@ R.mount(function () {
   <header class="section-head scale-head">
     <div class="section-head-stack" data-reveal="rise" data-delay="0">
       <span class="badge"><span class="badge-dot" data-pulse="250"></span><span class="badge-label">reliability</span></span>
-      <h2 class="display-title" data-focus="10" data-delay="70" style="font-size:var(--type-section-title);line-height:var(--line-section-title)"><em class="display-title-accent" style="font-size:var(--type-section-title-accent)">Reliable</em> in the ways that matter.</h2>
+      <h2 class="display-title" data-focus="10" data-delay="70" style="font-size:var(--type-section-title);line-height:var(--line-section-title)"><em class="display-title-accent" style="font-size:var(--type-section-title-accent)">Boring</em> in the ways that matter.</h2>
     </div>
-    <p class="section-head-aside" data-focus="8" data-delay="140">Website performance. Tracking. Advertising. Follow-ups. Customer data. The parts nobody notices — until they stop working.</p>
+    <p class="section-head-aside" data-focus="8" data-delay="140">Credentials, retries, rate limits, residency. The parts nobody demos, and the parts that decide the year.</p>
   </header>
 
   <div class="scale-cards">
-    <!-- Card / One digital system, every channel — 3888:6454 (art 3888:6457) -->
+    <!-- Card / One runtime, every app — 3888:6454 (art 3888:6457) -->
     <article class="scale-card scale-card-runtime" data-reveal="rise" data-delay="140">
-      <h3 class="scale-card-title" data-focus="8" data-delay="140">One digital system, every channel</h3>
-      <p class="scale-card-copy" data-focus="8" data-delay="210">BESTWEB holds the credentials, retries and rate limits, so a step behaves the same on Stripe or on the API you wrote last week.</p>
+      <h3 class="scale-card-title" data-focus="8" data-delay="140">One runtime, every app</h3>
+      <p class="scale-card-copy" data-focus="8" data-delay="210">Relay holds the credentials, retries and rate limits, so a step behaves the same on Stripe or on the API you wrote last week.</p>
       <div class="scale-art scale-art-runtime">
         <div class="scale-hub">
           <img class="scale-wires-768" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/scale/scale-wires-768.svg" alt="" width="304" height="86" loading="lazy" decoding="async">
@@ -4824,8 +4781,8 @@ R.mount(function () {
           <img class="scale-packet scale-packet-3" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/scale/scale-packet.svg" alt="" width="6" height="6" loading="lazy" decoding="async">
           <ul class="scale-apps" aria-label="one runtime, every connection">
             <li><span class="scale-node scale-mono scale-node-0" aria-hidden="true">SL</span><span class="scale-flash scale-flash-0" aria-hidden="true"></span><span class="scale-app-label scale-mono scale-mono-dim scale-app-label-0">slack</span></li>
-            <li><span class="scale-node scale-mono scale-node-1" aria-hidden="true">ST</span><span class="scale-flash scale-flash-1" aria-hidden="true"></span><span class="scale-app-label scale-mono scale-mono-dim scale-app-label-1">follow-up active</span></li>
-            <li><span class="scale-node scale-mono scale-node-2" aria-hidden="true">PG</span><span class="scale-flash scale-flash-2" aria-hidden="true"></span><span class="scale-app-label scale-mono scale-mono-dim scale-app-label-2">lead captured</span></li>
+            <li><span class="scale-node scale-mono scale-node-1" aria-hidden="true">ST</span><span class="scale-flash scale-flash-1" aria-hidden="true"></span><span class="scale-app-label scale-mono scale-mono-dim scale-app-label-1">stripe</span></li>
+            <li><span class="scale-node scale-mono scale-node-2" aria-hidden="true">PG</span><span class="scale-flash scale-flash-2" aria-hidden="true"></span><span class="scale-app-label scale-mono scale-mono-dim scale-app-label-2">postgres</span></li>
             <li><span class="scale-node scale-mono scale-node-3" aria-hidden="true">HS</span><span class="scale-flash scale-flash-3" aria-hidden="true"></span><span class="scale-app-label scale-mono scale-mono-dim scale-app-label-3">hubspot</span></li>
           </ul>
           <img class="scale-runtime" data-logo-target="" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/scale/scale-runtime.svg" alt="" width="96" height="96" loading="lazy" decoding="async">
@@ -4835,9 +4792,9 @@ R.mount(function () {
       </div>
     </article>
 
-    <!-- Card / See where your leads come from — 3888:6489 (art 3888:6492) -->
+    <!-- Card / Runs where your data lives — 3888:6489 (art 3888:6492) -->
     <article class="scale-card scale-card-regions" data-reveal="rise" data-delay="210">
-      <h3 class="scale-card-title" data-focus="8" data-delay="210">See where your leads come from</h3>
+      <h3 class="scale-card-title" data-focus="8" data-delay="210">Runs where your data lives</h3>
       <p class="scale-card-copy" data-focus="8" data-delay="280">Pick Frankfurt, Virginia or Sydney. Payloads and logs stay in the region you chose, and the audit trail says so in writing.</p>
       <div class="scale-art scale-art-regions scale-art-clip">
         <p class="scale-regions-label scale-mono scale-mono-dim"><span data-type data-delay="210" data-per="30">where runs executed, last 24 hours </span></p>
@@ -5015,7 +4972,7 @@ R.mount(function () {
 <div data-scroll-blur="enter leave">
 <style>
 /* ══════════════════════════════════════════════════════════════════════
-   07 SIGNALS — "A Tuesday, seen from BESTWEB." Five dashboard widgets under
+   07 SIGNALS — "A Tuesday, seen from Relay." Five dashboard widgets under
    the shared head. Figma 3888:6522 (1440) · 3888:10926 (1024) ·
    3832:8181 (768) · 3893:3826 (390). src/views/home/sections/signals/.
    ══════════════════════════════════════════════════════════════════════ */
@@ -5160,7 +5117,7 @@ R.mount(function () {
 .signals-day-label { position: relative; margin-top: 0.8125rem; opacity: 0; }
 .signals-day-shine { position: absolute; inset: 0; color: var(--foreground); opacity: 0; }
 
-/* ── automation (hands-off-widget.tsx / ring-gauge.tsx) ──────────────── */
+/* ── hands off (hands-off-widget.tsx / ring-gauge.tsx) ──────────────── */
 .signals-hands { height: 16rem; width: 24rem; }
 .signals-hands-title { top: 1.4375rem; left: 1.6875rem; }
 .signals-ring { position: absolute; top: 3.875rem; left: 7.875rem; width: 8.125rem; height: 8.125rem; }
@@ -5169,7 +5126,7 @@ R.mount(function () {
 .signals-ring-figure { position: absolute; top: 6.6875rem; left: 7.875rem; width: 8.125rem; margin: 0; text-align: center; color: var(--foreground); }
 .signals-hands-caption { position: absolute; top: 13.0625rem; left: 1.4375rem; width: 21rem; text-align: center; }
 
-/* ── waiting for follow-up (waiting-widget.tsx / face-stack.tsx) ────────── */
+/* ── waiting on people (waiting-widget.tsx / face-stack.tsx) ────────── */
 .signals-waiting { height: 15.25rem; width: 25.8125rem; }
 .signals-waiting-title { top: 1.4375rem; left: 1.4375rem; }
 .signals-faces { position: absolute; top: 4.5rem; left: 1.4375rem; display: flex; margin: 0; padding: 0; }
@@ -5181,7 +5138,7 @@ R.mount(function () {
 .signals-count-label { position: absolute; top: 0.5rem; left: 1.875rem; white-space: nowrap; font-size: var(--type-body); line-height: var(--line-body); color: var(--foreground-muted); }
 .signals-waiting-note { position: absolute; top: 12.1875rem; left: 1.4375rem; width: 22.8125rem; }
 
-/* ── marketing performance (failures-widget.tsx / curves-chart.tsx) ─ */
+/* ── failures and recoveries (failures-widget.tsx / curves-chart.tsx) ─ */
 .signals-failures { height: 15.25rem; width: 25.8125rem; }
 .signals-failures-title { top: 1.4375rem; left: 1.4375rem; }
 .signals-curves { position: absolute; top: 4.1875rem; left: 1.4375rem; height: 6.875rem; width: 22.8125rem; overflow: clip; }
@@ -5193,7 +5150,7 @@ R.mount(function () {
 .signals-legend li { display: flex; align-items: center; gap: 0.5rem; }
 .signals-legend img { width: 0.5rem; height: 0.5rem; flex-shrink: 0; }
 
-/* ── where leads came from (regions-widget.tsx / region-map.tsx) ─────────────── */
+/* ── where it ran (regions-widget.tsx / region-map.tsx) ─────────────── */
 .signals-regions { height: 15.25rem; width: 25.875rem; }
 .signals-regions-title { top: 1.4375rem; left: 1.4375rem; }
 .signals-map { position: absolute; top: 3.3125rem; left: 1.4375rem; height: 8.25rem; width: 22.875rem; fill: var(--signals-map-dot); }
@@ -5269,7 +5226,7 @@ R.mount(function () {
 }
 
 /* ── 768 (3832:8181, 1138): head at (40, 40), widgets at (40, 234) in a 2-up grid —
-      where leads came from | automation, waiting | failures — full-width week last ── */
+      where it ran | hands off, waiting | failures — full-width week last ── */
 @media (width <= 900px) {
   .signals { height: 71.125rem; }
   .signals-head { top: 2.5rem; left: 2.5rem; width: 43rem; }
@@ -5321,7 +5278,7 @@ R.mount(function () {
   .signals-regions-caption { top: 13.8125rem; width: 14.125rem; }
 }
 
-/* ── 390 (3893:3826, 1401): one column — where leads came from, automation, waiting, week. No failures. ── */
+/* ── 390 (3893:3826, 1401): one column — where it ran, hands off, waiting, week. No failures. ── */
 @media (width <= 580px) {
   .signals { height: 87.5625rem; }
   .signals-head { top: 0; left: 1.25rem; width: 21.875rem; }
@@ -5379,22 +5336,22 @@ R.mount(function () {
   <header class="section-head signals-head">
     <div class="section-head-stack" data-reveal="rise" data-delay="0">
       <span class="badge"><span class="badge-dot" data-pulse="250"></span><span class="badge-label">daily view</span></span>
-      <h2 class="display-title signals-title" data-focus="10" data-delay="70">Your business, seen through <em class="display-title-accent">one system</em>.</h2>
+      <h2 class="display-title signals-title" data-focus="10" data-delay="70">A <em class="display-title-accent">Tuesday</em>, seen from Relay.</h2>
     </div>
-    <p class="section-head-aside" data-focus="8" data-delay="140">See what is happening: what traffic is coming in, where enquiries originate and which leads still need attention.</p>
+    <p class="section-head-aside" data-focus="8" data-delay="140">The screen people actually keep open: what ran, what is queued, and who still owes an answer.</p>
   </header>
 
   <div class="signals-grid">
     <div class="signals-row">
-      <!-- Widget / this week, lead by lead — 876 × 256 (3888:6532) -->
+      <!-- Widget / this week, run by run — 876 × 256 (3888:6532) -->
       <article class="signals-widget signals-week" aria-labelledby="signals-week" data-reveal="rise" data-delay="140">
-        <h3 id="signals-week" class="signals-widget-title signals-week-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="290" data-per="30">this week, lead by lead</span></h3>
+        <h3 id="signals-week" class="signals-widget-title signals-week-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="290" data-per="30">this week, run by run</span></h3>
         <p class="signals-chip">
           <svg class="signals-clock" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M7 12.4C9.98234 12.4 12.4 9.98234 12.4 7C12.4 4.01766 9.98234 1.6 7 1.6C4.01766 1.6 1.6 4.01766 1.6 7C1.6 9.98234 4.01766 12.4 7 12.4Z" stroke-width="1.4"/>
             <path class="signals-clock-hand" d="M7 4.2V7L9 8.4" stroke-width="1.4" stroke-linecap="round" style="transform-origin:7px 7px"/>
           </svg>
-          <span class="signals-mono signals-chip-text"><span class="signals-chip-wide"><span class="signals-typed" data-type data-delay="540" data-per="30">next campaign update in 12 min</span></span><span class="signals-chip-narrow"><span class="signals-typed" data-type data-delay="540" data-per="30">next update in 12 min</span></span></span>
+          <span class="signals-mono signals-chip-text"><span class="signals-chip-wide"><span class="signals-typed" data-type data-delay="540" data-per="30">next run in 12 min</span></span><span class="signals-chip-narrow"><span class="signals-typed" data-type data-delay="540" data-per="30">next in 12 min</span></span></span>
         </p>
         <ul class="signals-hours" aria-hidden="true">
           <li class="signals-hour signals-hour-0 signals-mono signals-dim"><span class="signals-typed" data-type data-delay="290" data-per="30">09</span></li>
@@ -5405,22 +5362,22 @@ R.mount(function () {
         <ul class="signals-heat"><!-- columns built at mount from the load table --></ul>
       </article>
 
-      <!-- Widget / automation — 384 × 256, 82% ring gauge (3888:6607) -->
+      <!-- Widget / hands off — 384 × 256, 82% ring gauge (3888:6607) -->
       <article class="signals-widget signals-hands" aria-labelledby="signals-hands-off" data-reveal="rise" data-delay="210">
-        <h3 id="signals-hands-off" class="signals-widget-title signals-hands-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="360" data-per="30">automation</span></h3>
+        <h3 id="signals-hands-off" class="signals-widget-title signals-hands-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="360" data-per="30">hands off</span></h3>
         <svg class="signals-ring" aria-hidden="true" width="130" height="130" viewBox="0 0 130 130" fill="none">
           <path class="signals-ring-track" d="M65 119C94.8234 119 119 94.8234 119 65C119 35.1766 94.8234 11 65 11C35.1766 11 11 35.1766 11 65C11 94.8234 35.1766 119 65 119Z" stroke-width="10"/>
           <path class="signals-ring-arc" d="M65 11C76.6879 11.0309 88.0503 14.8532 97.3805 21.8927C106.711 28.9322 113.505 38.8089 116.743 50.0393C119.981 61.2698 119.488 73.2477 115.338 84.174C111.188 95.1003 103.605 104.385 93.7277 110.634C83.8504 116.883 72.2124 119.758 60.5615 118.829C48.9106 117.899 37.8758 113.214 29.1146 105.478C20.3534 97.7417 14.3387 87.3717 11.9739 75.9255C9.60906 64.4793 11.0218 52.5748 16 42" pathLength="1" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 1" stroke-dashoffset="1"/>
         </svg>
         <p class="signals-ring-figure signals-stat"><span class="signals-ring-n" aria-hidden="true" style="font-variant-numeric:tabular-nums">0%</span><span class="sr-only">82%</span></p>
-        <p class="signals-body signals-hands-caption" data-focus="8" data-delay="430">of follow-up steps handled automatically</p>
+        <p class="signals-body signals-hands-caption" data-focus="8" data-delay="430">of steps finish without a person in the loop</p>
       </article>
     </div>
 
     <div class="signals-row">
-      <!-- Widget / waiting for follow-up — 413 × 244, five overlapping faces (3888:6615) -->
+      <!-- Widget / waiting on people — 413 × 244, five overlapping faces (3888:6615) -->
       <article class="signals-widget signals-waiting" aria-labelledby="signals-waiting" data-reveal="rise" data-delay="280">
-        <h3 id="signals-waiting" class="signals-widget-title signals-waiting-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="430" data-per="30">waiting for follow-up</span></h3>
+        <h3 id="signals-waiting" class="signals-widget-title signals-waiting-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="430" data-per="30">waiting on people</span></h3>
         <ul class="signals-faces">
           <li class="signals-face"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/signals/signals-face-1.png" alt="" width="60" height="60" loading="lazy" decoding="async"></li>
           <li class="signals-face"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/signals/signals-face-2.png" alt="" width="60" height="60" loading="lazy" decoding="async"></li>
@@ -5430,14 +5387,14 @@ R.mount(function () {
         </ul>
         <p class="signals-count">
           <span class="signals-count-n signals-stat" aria-hidden="true" style="font-variant-numeric:tabular-nums">0</span><span class="sr-only">3</span>
-          <span class="signals-count-label" data-focus="8" data-delay="750">active enquiries</span>
+          <span class="signals-count-label" data-focus="8" data-delay="750">approvals</span>
         </p>
         <p class="signals-body signals-waiting-note" data-focus="8" data-delay="500">Longest wait: 26 minutes, in #finance</p>
       </article>
 
-      <!-- Widget / marketing performance — 413 × 244, crossing curves (3888:6625). Not in the 390 frame. -->
+      <!-- Widget / failures and recoveries — 413 × 244, crossing curves (3888:6625). Not in the 390 frame. -->
       <article class="signals-widget signals-failures" aria-labelledby="signals-failures" data-reveal="rise" data-delay="350">
-        <h3 id="signals-failures" class="signals-widget-title signals-failures-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="500" data-per="30">marketing performance</span></h3>
+        <h3 id="signals-failures" class="signals-widget-title signals-failures-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="500" data-per="30">failures and recoveries</span></h3>
         <svg class="signals-curves" role="img" aria-label="Recovered and failed-hard runs crossing over the week" width="365" height="110" viewBox="0 0 365 110" fill="none">
           <path class="signals-curve-recovered" d="M0 78C60.8333 78 76.0417 26 128.185 30C182.5 34 193.363 84 252.024 82C310.685 80 325.893 40 365 36" pathLength="1" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 1" stroke-dashoffset="1"/>
           <path class="signals-curve-failed" d="M0 34C60.8333 34 76.0417 86 128.185 82C182.5 78 193.363 28 252.024 30C310.685 32 325.893 72 365 76" pathLength="1" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 1" stroke-dashoffset="1"/>
@@ -5451,9 +5408,9 @@ R.mount(function () {
         </ul>
       </article>
 
-      <!-- Widget / where leads came from — 414 × 244, dotted map with three regions (3888:6640) -->
+      <!-- Widget / where it ran — 414 × 244, dotted map with three regions (3888:6640) -->
       <article class="signals-widget signals-regions" aria-labelledby="signals-regions" data-reveal="rise" data-delay="420">
-        <h3 id="signals-regions" class="signals-widget-title signals-regions-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="570" data-per="30">where leads came from</span></h3>
+        <h3 id="signals-regions" class="signals-widget-title signals-regions-title signals-mono signals-dim"><span class="signals-typed" data-type data-delay="570" data-per="30">where it ran</span></h3>
         <svg class="signals-map" role="img" aria-label="Dot map of run regions: iad 46%, fra 38%, syd 16%" width="366" height="132" viewBox="0 0 366 132"><!-- 249 dots in 9 buckets, built at mount --></svg>
         <!-- Frame order: every label plate + label first, the ring / halo / pin stacks above them -->
         <ul class="signals-plates" aria-hidden="true">
@@ -6113,7 +6070,7 @@ R.mount(function () {
   .proof-quote figcaption { position: static; margin-top: 0.75rem; }
 }
 </style>
-<section id="proof" class="proof" aria-label="Results we did not have to explain away.">
+<section id="proof" class="proof" aria-label="Numbers we did not have to explain away.">
   <!-- Blooms 3488:22725 / 3488:22726, baked to dithered PNGs; each drifts ±40 px with scroll -->
   <div class="proof-blooms" aria-hidden="true" data-reveal="fade">
     <div class="proof-drift" data-proof-drift="-1"><div class="proof-drift-inner">
@@ -6126,68 +6083,68 @@ R.mount(function () {
 
   <div class="proof-head" data-reveal="rise">
     <span class="badge"><span class="badge-dot" data-pulse="250"></span><span class="badge-label">case studies</span></span>
-    <h2 class="display-title proof-title" data-focus="10" data-delay="70">Results we did <em class="display-title-accent">not</em> have to explain away.</h2>
+    <h2 class="display-title proof-title" data-focus="10" data-delay="70">Numbers we did <em class="display-title-accent">not</em> have to explain away.</h2>
   </div>
-  <p class="proof-aside" data-reveal="fade" data-delay="140">A real project. A real website. Real advertising campaigns. And enough new enquiries to recover the investment.</p>
+  <p class="proof-aside" data-reveal="fade" data-delay="140">Counted across every account, including the ones that churned. An honest average, not a best case.</p>
 
   <span class="proof-rule proof-rule-top" data-drawline data-delay="210" aria-hidden="true"></span>
   <span class="proof-rule proof-rule-bottom" data-drawline data-delay="350" aria-hidden="true"></span>
 
   <ul class="proof-columns">
     <li class="proof-column proof-column-1" data-proof-column="0" data-visual="sparkline">
-      <p class="proof-label"><span class="proof-type" data-proof-type>PROJECT</span></p>
-      <span class="proof-stat" data-proof-count="Coverty.ee"><span class="sr-only">Coverty.ee</span><span class="proof-count-live" aria-hidden="true">Coverty.ee</span></span>
-      <p class="proof-caption proof-focus" data-proof-caption>website + digital marketing setup</p>
+      <p class="proof-label"><span class="proof-type" data-proof-type>volume</span></p>
+      <span class="proof-stat" data-proof-count="62,000"><span class="sr-only">62,000</span><span class="proof-count-live" aria-hidden="true">62,000</span></span>
+      <p class="proof-caption proof-focus" data-proof-caption>runs handled on an average weekday</p>
       <div class="proof-visual" aria-hidden="true" data-proof-visual>
         <svg class="proof-sparkline" data-proof-sparkline height="56" fill="none" overflow="visible"></svg>
       </div>
-      <p class="proof-trend" data-proof-trend><span class="proof-trend-text">new digital system launched</span></p>
+      <p class="proof-trend" data-proof-trend><span class="proof-trend-text">up 18% since March</span></p>
       <div class="proof-card-rule-wrap"><span class="proof-card-rule" data-proof-cardrule aria-hidden="true"></span></div>
       <span class="proof-tick" data-proof-tick aria-hidden="true"></span>
       <figure class="proof-quote" data-proof-quote>
-        <blockquote><p class="proof-focus" data-proof-q>We started by building a new website and creating a clearer digital foundation for Coverty.</p></blockquote>
+        <blockquote><p class="proof-focus" data-proof-q>We killed four scripts nobody wanted to own and a spreadsheet that had been lying to us.</p></blockquote>
         <figcaption>
-          <span class="proof-quote-name proof-focus" data-proof-name>Coverty Project</span>
-          <span class="proof-quote-role proof-focus" data-proof-role>website development</span>
+          <span class="proof-quote-name proof-focus" data-proof-name>Marta Silvani</span>
+          <span class="proof-quote-role proof-focus" data-proof-role>head of operations, Fielder</span>
         </figcaption>
       </figure>
     </li>
     <li class="proof-column proof-column-2" data-proof-column="1" data-visual="hours">
-      <p class="proof-label"><span class="proof-type" data-proof-type>TIME TO RESULT</span></p>
-      <span class="proof-stat" data-proof-count="~1.5"><span class="sr-only">~1.5</span><span class="proof-count-live" aria-hidden="true">~1.5</span></span>
-      <p class="proof-caption proof-focus" data-proof-caption>months until the website investment was recovered</p>
+      <p class="proof-label"><span class="proof-type" data-proof-type>time back</span></p>
+      <span class="proof-stat" data-proof-count="11"><span class="sr-only">11</span><span class="proof-count-live" aria-hidden="true">11</span></span>
+      <p class="proof-caption proof-focus" data-proof-caption>hours a week given back per person</p>
       <div class="proof-visual" aria-hidden="true" data-proof-visual>
         <svg class="proof-hours" data-proof-hours height="56" fill="none"></svg>
         <span class="proof-hour-dim proof-hour-dim-1"></span>
         <span class="proof-hour-dim proof-hour-dim-2"></span>
         <span class="proof-hour-dim proof-hour-dim-3"></span>
       </div>
-      <p class="proof-trend" data-proof-trend><span class="proof-trend-text">based on incoming enquiries</span></p>
+      <p class="proof-trend" data-proof-trend><span class="proof-trend-text">measured across 1,400 teams</span></p>
       <div class="proof-card-rule-wrap"><span class="proof-card-rule" data-proof-cardrule aria-hidden="true"></span></div>
       <span class="proof-tick" data-proof-tick aria-hidden="true"></span>
       <figure class="proof-quote" data-proof-quote>
-        <blockquote><p class="proof-focus" data-proof-q>Then we connected Google Ads and Meta Ads, set up the accounts and launched the first campaigns.</p></blockquote>
+        <blockquote><p class="proof-focus" data-proof-q>Finance stopped asking me for the weekly export. It just lands in the channel now.</p></blockquote>
         <figcaption>
-          <span class="proof-quote-name proof-focus" data-proof-name>Coverty Project</span>
-          <span class="proof-quote-role proof-focus" data-proof-role>digital marketing setup</span>
+          <span class="proof-quote-name proof-focus" data-proof-name>Owen Brandt</span>
+          <span class="proof-quote-role proof-focus" data-proof-role>data lead, Cassette</span>
         </figcaption>
       </figure>
     </li>
     <li class="proof-column proof-column-3" data-proof-column="2" data-visual="progress">
-      <p class="proof-label"><span class="proof-type" data-proof-type>SYSTEM</span></p>
-      <span class="proof-stat" data-proof-count="3"><span class="sr-only">3</span><span class="proof-count-live" aria-hidden="true">3</span></span>
-      <p class="proof-caption proof-focus" data-proof-caption>connected layers: website, advertising and lead generation</p>
+      <p class="proof-label"><span class="proof-type" data-proof-type>first attempt</span></p>
+      <span class="proof-stat" data-proof-count="99%"><span class="sr-only">99%</span><span class="proof-count-live" aria-hidden="true">99%</span></span>
+      <p class="proof-caption proof-focus" data-proof-caption>of runs finish on the first attempt</p>
       <div class="proof-visual proof-visual-progress" aria-hidden="true" data-proof-visual>
         <div class="proof-progress" data-proof-progress><div class="proof-track"><div class="proof-fill" data-proof-fill></div></div></div>
       </div>
-      <p class="proof-trend" data-proof-trend><span class="proof-trend-text">built to grow further</span></p>
+      <p class="proof-trend" data-proof-trend><span class="proof-trend-text">the other 1% retried and passed</span></p>
       <div class="proof-card-rule-wrap"><span class="proof-card-rule" data-proof-cardrule aria-hidden="true"></span></div>
       <span class="proof-tick" data-proof-tick aria-hidden="true"></span>
       <figure class="proof-quote" data-proof-quote>
-        <blockquote><p class="proof-focus" data-proof-q>Within approximately 1.5 months, enough enquiries had come in for the website investment to pay for itself.</p></blockquote>
+        <blockquote><p class="proof-focus" data-proof-q>What sold my team was the log. When something breaks we see the exact payload.</p></blockquote>
         <figcaption>
-          <span class="proof-quote-name proof-focus" data-proof-name>Coverty Project</span>
-          <span class="proof-quote-role proof-focus" data-proof-role>measured business result</span>
+          <span class="proof-quote-name proof-focus" data-proof-name>Tom Ekelund</span>
+          <span class="proof-quote-role proof-focus" data-proof-role>cto, Bright Coast</span>
         </figcaption>
       </figure>
     </li>
@@ -6794,41 +6751,41 @@ R.mount(function () {
   <header class="section-head pricing-head">
     <div class="section-head-stack" data-reveal="rise">
       <span class="badge"><span class="badge-dot" data-pulse="250"></span><span class="badge-label">pricing</span></span>
-      <h2 class="display-title" data-focus="10" data-delay="70" style="font-size:var(--type-section-title);line-height:var(--line-section-title)">You pay for a solution, not <em class="display-title-accent" style="font-size:var(--type-section-title-accent)">just a website</em>.</h2>
+      <h2 class="display-title" data-focus="10" data-delay="70" style="font-size:var(--type-section-title);line-height:var(--line-section-title)">You pay for runs, not <em class="display-title-accent" style="font-size:var(--type-section-title-accent)">for seats</em>.</h2>
     </div>
-    <p class="section-head-aside" data-focus="8" data-delay="140">Choose how far you want to take your digital system. Start with a powerful website — or connect the entire journey from advertising to customer management.</p>
+    <p class="section-head-aside" data-focus="8" data-delay="140">Invite the whole company on any plan. Nobody should ask permission to automate their own job.</p>
   </header>
 
   <!-- run meter — a native range input over the drawn track -->
   <div class="pricing-meter" data-pricing-meter>
-    <p class="pricing-meter-eyebrow pricing-mono"><span class="pricing-type" data-pricing-type>build your system</span></p>
-    <label class="pricing-question" for="pricing-runs"><span data-focus="8" data-delay="70">How much do you want your digital system to handle?</span></label>
+    <p class="pricing-meter-eyebrow pricing-mono"><span class="pricing-type" data-pricing-type>estimate</span></p>
+    <label class="pricing-question" for="pricing-runs"><span data-focus="8" data-delay="70">How many runs do you expect a month?</span></label>
     <div data-pricing-slider style="--pricing-fill:0">
-      <input id="pricing-runs" class="pricing-range" type="range" min="0" max="860" step="1" value="373" aria-valuetext="WEBSITE + MARKETING runs one-time project, GROWTH ENGINE plan">
+      <input id="pricing-runs" class="pricing-range" type="range" min="0" max="860" step="1" value="373" aria-valuetext="30,000 runs a month, Team plan">
       <div class="pricing-track"><div class="pricing-fill"></div></div>
       <div class="pricing-knob-box"><img class="pricing-knob" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/pricing/pricing-knob.svg" alt="" width="70" height="76" loading="lazy" decoding="async"></div>
     </div>
     <span class="pricing-tick pricing-tick-1" data-pricing-tick="0" aria-hidden="true"></span>
     <span class="pricing-tick pricing-tick-2 is-active" data-pricing-tick="1" aria-hidden="true"></span>
     <span class="pricing-tick pricing-tick-3" data-pricing-tick="2" aria-hidden="true"></span>
-    <span class="pricing-stop pricing-stop-1 pricing-mono pricing-type" data-pricing-stop="0" data-pricing-type data-delay="140" aria-hidden="true">WEBSITE</span>
-    <span class="pricing-stop pricing-stop-2 pricing-mono pricing-type is-active" data-pricing-stop="1" data-pricing-type data-delay="210" aria-hidden="true">WEBSITE + MARKETING</span>
-    <span class="pricing-stop pricing-stop-3 pricing-mono pricing-type" data-pricing-stop="2" data-pricing-type data-delay="280" aria-hidden="true">FULL DIGITAL SYSTEM</span>
+    <span class="pricing-stop pricing-stop-1 pricing-mono pricing-type" data-pricing-stop="0" data-pricing-type data-delay="140" aria-hidden="true">3,000</span>
+    <span class="pricing-stop pricing-stop-2 pricing-mono pricing-type is-active" data-pricing-stop="1" data-pricing-type data-delay="210" aria-hidden="true">30,000</span>
+    <span class="pricing-stop pricing-stop-3 pricing-mono pricing-type" data-pricing-stop="2" data-pricing-type data-delay="280" aria-hidden="true">300,000</span>
     <span class="pricing-vrule" aria-hidden="true"></span>
     <div aria-live="polite">
-      <p class="pricing-result-eyebrow pricing-mono"><span class="pricing-type" data-pricing-type data-delay="240">your package</span></p>
-      <div class="pricing-plan pricing-focus" data-focus="8" data-delay="310"><span class="pricing-swap" data-pricing-swap="name"><span>GROWTH ENGINE</span></span></div>
+      <p class="pricing-result-eyebrow pricing-mono"><span class="pricing-type" data-pricing-type data-delay="240">your plan</span></p>
+      <div class="pricing-plan pricing-focus" data-focus="8" data-delay="310"><span class="pricing-swap" data-pricing-swap="name"><span>Team</span></span></div>
       <p class="pricing-price-row">
-        <span class="pricing-price" data-pricing-price><span class="sr-only">€4,900</span><span aria-hidden="true" data-pricing-digits>$</span><span class="pricing-probe" aria-hidden="true" data-pricing-probe><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span>
-        <span class="pricing-period pricing-mono pricing-type" data-pricing-type data-delay="240">one-time project</span>
+        <span class="pricing-price" data-pricing-price><span class="sr-only">$89</span><span aria-hidden="true" data-pricing-digits>$</span><span class="pricing-probe" aria-hidden="true" data-pricing-probe><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span>
+        <span class="pricing-period pricing-mono pricing-type" data-pricing-type data-delay="240">a month</span>
       </p>
       <span class="pricing-result-rule" aria-hidden="true"></span>
-      <div class="pricing-included pricing-mono pricing-focus" data-focus="8" data-delay="450"><span class="pricing-swap" data-pricing-swap="included"><span>WEBSITE + MARKETING website + marketing setup</span></span></div>
+      <div class="pricing-included pricing-mono pricing-focus" data-focus="8" data-delay="450"><span class="pricing-swap" data-pricing-swap="included"><span>30,000 runs included</span></span></div>
     </div>
-    <a class="pill pill-lime pill-lg pricing-meter-cta" href="#footer" data-lime-cta data-cursor="none">
+    <a class="pill pill-lime pill-lg pricing-meter-cta" href="#start" data-lime-cta data-cursor="none">
       <span class="pill-lime-fill" aria-hidden="true"></span>
-      <span class="pill-label">Start a project</span>
-      <span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start a project<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+      <span class="pill-label">Start free</span>
+      <span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
       <span class="stroke-ring pill-lime-ring" aria-hidden="true"></span>
     </a>
   </div>
@@ -6843,76 +6800,76 @@ R.mount(function () {
   <ul class="pricing-box pricing-row pricing-cards">
     <li class="pricing-cell pricing-cell-1"><div data-pricing-hover="0">
       <article class="pricing-card" data-pricing-card="0" data-delay="140">
-        <h3 class="pricing-name pricing-mono pricing-type" data-pricing-type data-tier-name>FOUNDATION</h3>
+        <h3 class="pricing-name pricing-mono pricing-type" data-pricing-type data-tier-name>Starter</h3>
         <div class="pricing-card-price">
-          <span class="pricing-price pricing-focus" data-tier-price>€2,900</span>
-          <p class="pricing-card-period pricing-mono"><span class="pricing-type" data-pricing-type data-tier-period>one-time project</span></p>
+          <span class="pricing-price pricing-focus" data-tier-price>$29</span>
+          <p class="pricing-card-period pricing-mono"><span class="pricing-type" data-pricing-type data-tier-period>a month</span></p>
         </div>
         <ul class="pricing-features">
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-label pricing-focus">WEBSITE runs one-time project</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-label pricing-focus">Mobile-first experience</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Contact and enquiry system</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-label pricing-focus">Analytics setup</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-label pricing-focus">3,000 runs a month</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-label pricing-focus">10 workflows</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">7 days of run history</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-label pricing-focus">email support</span></li>
         </ul>
         <span class="pricing-card-rule" aria-hidden="true"></span>
         <div class="pricing-look pricing-look-glass" data-look="glass">
           <span class="pricing-shade" aria-hidden="true"></span>
-          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#footer" data-glass-tier data-cursor="none"><span>Start a project</span><span class="pricing-glass-fill" aria-hidden="true">Start a project</span></a></div>
+          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#start" data-glass-tier data-cursor="none"><span>Start free</span><span class="pricing-glass-fill" aria-hidden="true">Start free</span></a></div>
         </div>
         <div class="pricing-look pricing-look-lime" data-look="lime">
           <div class="pricing-team-box" data-team-cta><span class="pricing-team-glow" aria-hidden="true"></span>
-            <a class="pill pill-lime" href="#footer" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start a project</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start a project<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
+            <a class="pill pill-lime" href="#start" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start free</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
           </div>
         </div>
       </article>
     </div></li>
     <li class="pricing-cell pricing-cell-2"><div data-pricing-hover="1">
       <article class="pricing-card pricing-card-featured" data-pricing-card="1" data-delay="210">
-        <h3 class="pricing-name pricing-mono pricing-type" data-pricing-type data-tier-name>GROWTH ENGINE</h3>
+        <h3 class="pricing-name pricing-mono pricing-type" data-pricing-type data-tier-name>Team</h3>
         <div class="pricing-card-price">
-          <span class="pricing-price pricing-focus" data-tier-price>€4,900</span>
-          <p class="pricing-card-period pricing-mono"><span class="pricing-type" data-pricing-type data-tier-period>one-time project</span></p>
+          <span class="pricing-price pricing-focus" data-tier-price>$89</span>
+          <p class="pricing-card-period pricing-mono"><span class="pricing-type" data-pricing-type data-tier-period>a month</span></p>
         </div>
         <p class="pricing-tag pricing-mono" data-tier-tag>most picked</p>
         <ul class="pricing-features">
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">WEBSITE + MARKETING runs one-time project</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Google Ads setup</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Meta Ads setup</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Slack active enquiries and code steps</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">30,000 runs a month</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">unlimited workflows</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">90 days of run history</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Slack approvals and code steps</span></li>
         </ul>
         <span class="pricing-card-rule" aria-hidden="true"></span>
         <div class="pricing-look pricing-look-glass" data-look="glass">
           <span class="pricing-shade" aria-hidden="true"></span>
-          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#footer" data-glass-tier data-cursor="none"><span>Start a project</span><span class="pricing-glass-fill" aria-hidden="true">Start a project</span></a></div>
+          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#start" data-glass-tier data-cursor="none"><span>Start free</span><span class="pricing-glass-fill" aria-hidden="true">Start free</span></a></div>
         </div>
         <div class="pricing-look pricing-look-lime" data-look="lime">
           <div class="pricing-team-box" data-team-cta><span class="pricing-team-glow" aria-hidden="true"></span>
-            <a class="pill pill-lime" href="#footer" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start a project</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start a project<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
+            <a class="pill pill-lime" href="#start" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start free</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
           </div>
         </div>
       </article>
     </div></li>
     <li class="pricing-cell pricing-cell-3"><div data-pricing-hover="2">
       <article class="pricing-card" data-pricing-card="2" data-delay="280">
-        <h3 class="pricing-name pricing-mono pricing-type" data-pricing-type data-tier-name>DIGITAL OPERATING SYSTEM</h3>
+        <h3 class="pricing-name pricing-mono pricing-type" data-pricing-type data-tier-name>Scale</h3>
         <div class="pricing-card-price">
-          <span class="pricing-price pricing-focus" data-tier-price>€2,9000</span>
-          <p class="pricing-card-period pricing-mono"><span class="pricing-type" data-pricing-type data-tier-period>one-time project</span></p>
+          <span class="pricing-price pricing-focus" data-tier-price>$290</span>
+          <p class="pricing-card-period pricing-mono"><span class="pricing-type" data-pricing-type data-tier-period>a month</span></p>
         </div>
         <ul class="pricing-features">
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">FULL DIGITAL SYSTEM runs one-time project</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Custom CRM</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Lead management system</span></li>
-          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">Automated follow-ups</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">300,000 runs a month</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">single sign on and audit log</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">1 year of run history</span></li>
+          <li class="pricing-feature"><span class="pricing-check" aria-hidden="true"><svg class="pricing-check-wide" viewBox="0 0 16 16"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><svg class="pricing-check-narrow" viewBox="0 0 10 16"><path d="M1 8.5L2.77778 11.5L6.33333 4.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span><span class="pricing-feature-text pricing-feature-body pricing-focus">named engineer, 4 hour response</span></li>
         </ul>
         <span class="pricing-card-rule" aria-hidden="true"></span>
         <div class="pricing-look pricing-look-glass" data-look="glass">
           <span class="pricing-shade" aria-hidden="true"></span>
-          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#footer" data-glass-tier data-cursor="none"><span>Talk to us</span><span class="pricing-glass-fill" aria-hidden="true">Talk to us</span></a></div>
+          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#contact" data-glass-tier data-cursor="none"><span>Talk to us</span><span class="pricing-glass-fill" aria-hidden="true">Talk to us</span></a></div>
         </div>
         <div class="pricing-look pricing-look-lime" data-look="lime">
           <div class="pricing-team-box" data-team-cta><span class="pricing-team-glow" aria-hidden="true"></span>
-            <a class="pill pill-lime" href="#footer" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Talk to us</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Talk to us<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
+            <a class="pill pill-lime" href="#contact" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Talk to us</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Talk to us<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
           </div>
         </div>
       </article>
@@ -6940,11 +6897,11 @@ R.mount(function () {
   var format = function (runs) { return runs.toLocaleString('en-US') }
 
   var TIERS = [
-    { name: 'FOUNDATION', price: '€2,900', runs: 3000 },
-    { name: 'GROWTH ENGINE', price: '€4,900', runs: 30000 },
-    { name: 'DIGITAL OPERATING SYSTEM', price: '€9,900', runs: 300000 }
+    { name: 'Starter', price: '$29', runs: 3000 },
+    { name: 'Team', price: '$89', runs: 30000 },
+    { name: 'Scale', price: '$290', runs: 300000 }
   ]
-  var INCLUDED = 'project package'
+  var INCLUDED = 'runs included'
 
   /* TypeLabel (type-label.tsx): TypeText's clip restated with +0.5px before rounding;
      `trigger` runs the typing off that element being seen instead. */
@@ -7091,7 +7048,7 @@ R.mount(function () {
     var px = Math.round(toPx(level, track))
     input.max = String(track.length)
     input.value = String(px)
-    input.setAttribute('aria-valuetext', format(runs) + ' runs one-time project, ' + plan.name + ' plan')
+    input.setAttribute('aria-valuetext', format(runs) + ' runs a month, ' + plan.name + ' plan')
     if (initial) knob.set({ k: px / track.length })
     knob.start({ k: px / track.length })
     slider.style.setProperty('--pricing-fill', String(knob.get().k))
@@ -7236,7 +7193,7 @@ R.mount(function () {
   --raw-footer-color-white-a80: rgba(255, 255, 255, 0.8); /* social chip label */
   --raw-footer-color-white-a25: rgba(255, 255, 255, 0.25); /* logo mark border 3488:22891 */
   --raw-footer-color-mark-from: #e2ff8f; /* logo mark gradient 0% */
-  --raw-footer-color-ink-a45: rgba(10, 11, 9, 0.45); /* Your your work email placeholder 3488:22901 */
+  --raw-footer-color-ink-a45: rgba(10, 11, 9, 0.45); /* Work email placeholder 3488:22901 */
   --raw-footer-color-ink-a50: rgba(10, 11, 9, 0.5); /* what now 3488:22897 */
   --raw-footer-color-ink-a62: rgba(10, 11, 9, 0.62); /* eyebrow text on the lime panel: a50 measured 3.53:1 */
   --raw-footer-color-ink-a60: rgba(10, 11, 9, 0.6); /* CTA copy 3488:22899 */
@@ -7665,7 +7622,7 @@ R.mount(function () {
 
     <a class="footer-logo" href="/">
       <span aria-hidden="true" class="footer-mark footer-mark-md"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/footer/footer-logo-glyph.svg" alt="" width="28" height="28" loading="lazy" decoding="async"></span>
-      <span class="footer-wordmark">BESTWEB</span>
+      <span class="footer-wordmark">Relay</span>
     </a>
 
     <p class="footer-tagline" data-footer-cue="focus" data-footer-stage-of="top" data-footer-delay="430">Automation for the work that lives between your tools.</p>
@@ -7675,10 +7632,10 @@ R.mount(function () {
     <div data-footer-cue="fade" data-footer-stage-of="top" data-footer-delay="540">
       <p id="footer-social-label" class="footer-social-label footer-mono">stay in touch</p>
       <ul class="footer-socials" aria-labelledby="footer-social-label">
-        <li><span class="footer-social footer-mono"  aria-label="LinkedIn" aria-disabled="true" title="Link not yet available">in</span></li>
-        <li><span class="footer-social footer-mono"  aria-label="X" aria-disabled="true" title="Link not yet available">x</span></li>
-        <li><span class="footer-social footer-mono"  aria-label="GitHub" aria-disabled="true" title="Link not yet available">gh</span></li>
-        <li><span class="footer-social footer-mono"  aria-label="Discord" aria-disabled="true" title="Link not yet available">dc</span></li>
+        <li><a class="footer-social footer-mono" href="#linkedin" aria-label="LinkedIn">in</a></li>
+        <li><a class="footer-social footer-mono" href="#x" aria-label="X">x</a></li>
+        <li><a class="footer-social footer-mono" href="#github" aria-label="GitHub">gh</a></li>
+        <li><a class="footer-social footer-mono" href="#discord" aria-label="Discord">dc</a></li>
       </ul>
     </div>
   </div>
@@ -7686,17 +7643,17 @@ R.mount(function () {
   <!-- CTA panel 3488:22896 -->
   <div class="footer-cta" data-footer-cue="rise" data-footer-stage-of="top" data-footer-delay="0">
     <p class="footer-eyebrow footer-mono"><span class="footer-type" data-footer-cue="type" data-footer-stage-of="top" data-footer-delay="160" data-footer-per="30">what now</span></p>
-    <h2 class="footer-cta-title"><span class="footer-cta-title-line" data-footer-cue="linerise" data-footer-stage-of="top" data-footer-delay="160">Pick the part of your business <em>that should work better</em>.</span></h2>
-    <p class="footer-cta-copy" data-footer-cue="focus" data-footer-stage-of="top" data-footer-delay="260">Tell us where your current website or digital process is falling short. We will help you see what the next system should look like.</p>
+    <h2 class="footer-cta-title"><span class="footer-cta-title-line" data-footer-cue="linerise" data-footer-stage-of="top" data-footer-delay="160">Pick the task you <em>hate</em> most.</span></h2>
+    <p class="footer-cta-copy" data-footer-cue="focus" data-footer-stage-of="top" data-footer-delay="260">Bring one job nobody enjoys doing by hand. If Relay cannot run it by the end of the trial, we will tell you so.</p>
     <div class="footer-form-wrap" data-footer-cue="rise" data-footer-stage-of="top" data-footer-delay="350">
       <!-- Signup 3488:22900 -->
       <form class="footer-form" data-footer-form novalidate>
         <span aria-hidden="true" class="footer-form-ring" data-footer-form-ring></span>
-        <label for="footer-email" class="footer-sr-only">Your your work email</label>
-        <input id="footer-email" name="email" type="email" required autocomplete="email" placeholder="Your your work email" data-footer-email>
+        <label for="footer-email" class="footer-sr-only">Work email</label>
+        <input id="footer-email" name="email" type="email" required autocomplete="email" placeholder="Work email" data-footer-email>
         <button type="submit" class="footer-submit">
           <span aria-live="polite" class="footer-submit-label" data-footer-submit-label>
-            <span class="footer-submit-start" data-footer-submit-start><span data-footer-submit-word>Start a project</span></span>
+            <span class="footer-submit-start" data-footer-submit-start><span data-footer-submit-word>Start free</span></span>
             <span aria-hidden="true" class="footer-submit-sent" data-footer-submit-sent><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Sent</span>
           </span>
           <span aria-hidden="true" class="footer-submit-arrow" data-footer-submit-arrow><span data-footer-submit-arrow-inner><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
@@ -7707,7 +7664,7 @@ R.mount(function () {
 
   <!-- Status row 3888:7092 / 7095 / 7098 — "Точки по очереди" -->
   <ul class="footer-status footer-mono">
-    <li><span aria-hidden="true" class="footer-status-dot" data-footer-status-dot="0"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/footer/footer-status-dot.svg" alt="" width="6" height="6" loading="lazy" decoding="async"></span><span data-footer-cue="fade" data-footer-stage-of="top" data-footer-delay="680"><span class="footer-status-full">growth systems online</span><span class="footer-status-short">growth systems online</span></span></li>
+    <li><span aria-hidden="true" class="footer-status-dot" data-footer-status-dot="0"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/footer/footer-status-dot.svg" alt="" width="6" height="6" loading="lazy" decoding="async"></span><span data-footer-cue="fade" data-footer-stage-of="top" data-footer-delay="680"><span class="footer-status-full">all systems normal</span><span class="footer-status-short">all systems normal</span></span></li>
     <li><span aria-hidden="true" class="footer-status-dot" data-footer-status-dot="1"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/footer/footer-status-dot.svg" alt="" width="6" height="6" loading="lazy" decoding="async"></span><span data-footer-cue="fade" data-footer-stage-of="top" data-footer-delay="810"><span class="footer-status-full">99% pass on the first attempt</span><span class="footer-status-short">99% first-attempt pass</span></span></li>
     <li><span aria-hidden="true" class="footer-status-dot" data-footer-status-dot="2"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/footer/footer-status-dot.svg" alt="" width="6" height="6" loading="lazy" decoding="async"></span><span data-footer-cue="fade" data-footer-stage-of="top" data-footer-delay="940"><span class="footer-status-full">three regions, no cross border hops</span><span class="footer-status-short">three regions, no hops</span></span></li>
   </ul>
@@ -7717,7 +7674,7 @@ R.mount(function () {
   <!-- Company block 3888:7101 -->
   <div class="footer-company" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="40">
     <span aria-hidden="true" class="footer-mark footer-mark-sm"><img src="https://storage.getlayers.ai/assets/relay-4ee0729d77/footer/footer-labs-glyph.svg" alt="" width="26" height="26" loading="lazy" decoding="async"></span>
-    <p class="footer-company-name">BESTWEB</p>
+    <p class="footer-company-name">Relay Labs</p>
     <p class="footer-company-copy">Independent, profitable, and boring on purpose since 2024.</p>
     <p class="footer-company-compliance footer-mono">SOC 2 Type II / audit log / data residency</p>
   </div>
@@ -7727,35 +7684,35 @@ R.mount(function () {
       <p id="footer-col-product" class="footer-col-title footer-mono">product</p>
       <ul aria-labelledby="footer-col-product">
         <li><a href="#product">Canvas</a></li>
-        <li><a href="#integrations">Apps</a></li>
-        <li><a href="#product">Run history</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#run-history">Run history</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
     </div>
     <div class="footer-col" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="150">
       <p id="footer-col-learn" class="footer-col-title footer-mono">learn</p>
       <ul aria-labelledby="footer-col-learn">
-        <li><span  aria-disabled="true" title="Link not yet available">Docs</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Templates</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Changelog</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Status</span></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#templates">Templates</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#status">Status</a></li>
       </ul>
     </div>
     <div class="footer-col" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="200">
       <p id="footer-col-company" class="footer-col-title footer-mono">company</p>
       <ul aria-labelledby="footer-col-company">
-        <li><span  aria-disabled="true" title="Link not yet available">About</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Careers</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Security</span></li>
-        <li><a href="#footer">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="250">
       <p id="footer-col-legal" class="footer-col-title footer-mono">legal</p>
       <ul aria-labelledby="footer-col-legal">
-        <li><span  aria-disabled="true" title="Link not yet available">Privacy</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Terms</span></li>
-        <li><span  aria-disabled="true" title="Link not yet available">Cookies</span></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#cookies">Cookies</a></li>
       </ul>
     </div>
   </nav>
