@@ -525,7 +525,7 @@ html[data-preload] [data-preloader] { display: block; }
   font: 500 13px/1.4 ui-monospace, monospace; background: #b3261e; color: #fff; text-align: center;
 }
 </style>
-</head>
+<style>html{scroll-padding-top:100px}span[aria-disabled="true"]{cursor:default;opacity:.48}span[aria-disabled="true"]:hover{color:inherit!important}@media(max-width:580px){html{scroll-padding-top:72px}}</style></head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
      Relay tile in the middle; a lime line runs round the edge of the screen
@@ -1619,7 +1619,7 @@ html[data-preload] [data-preloader] { display: block; }
       <ul>
         <li><a class="nav-sheet-row" href="#product"><span class="nav-sheet-code">PR</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Product</span><span class="nav-sheet-note">Canvas, approvals, run history</span></span></a></li>
         <li><a class="nav-sheet-row" href="#how-it-works"><span class="nav-sheet-code">HW</span><span class="nav-sheet-copy"><span class="nav-sheet-label">How it works</span><span class="nav-sheet-note">From trigger to answer</span></span></a></li>
-        <li><a class="nav-sheet-row" href="#customers"><span class="nav-sheet-code">CU</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Customers</span><span class="nav-sheet-note">Numbers we did not explain away</span></span></a></li>
+        <li><a class="nav-sheet-row" href="#proof"><span class="nav-sheet-code">CU</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Customers</span><span class="nav-sheet-note">Numbers we did not explain away</span></span></a></li>
         <li><a class="nav-sheet-row" href="#pricing"><span class="nav-sheet-code">$</span><span class="nav-sheet-copy"><span class="nav-sheet-label">Pricing</span><span class="nav-sheet-note">Pay for runs, not seats</span></span></a></li>
       </ul>
     </nav>
@@ -1628,7 +1628,7 @@ html[data-preload] [data-preloader] { display: block; }
         <span class="nav-dot"><span class="nav-dot-halo" aria-hidden="true"></span><span class="nav-dot-core" aria-hidden="true"></span></span>
         <span class="nav-status-text">all systems normal</span>
       </p>
-      <a class="pill pill-lime pill-lg" href="#start" data-lime-cta data-cursor="none">
+      <a class="pill pill-lime pill-lg" href="#footer" data-lime-cta data-cursor="none">
         <span class="pill-lime-fill" aria-hidden="true"></span>
         <span class="pill-label">Start free</span>
         <span class="pill-lime-ink" aria-hidden="true">
@@ -1650,7 +1650,7 @@ html[data-preload] [data-preloader] { display: block; }
       <ul class="nav-links">
         <li><a href="#product">Product</a></li>
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#customers">Customers</a></li>
+        <li><a href="#proof">Customers</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
     </nav>
@@ -1659,7 +1659,7 @@ html[data-preload] [data-preloader] { display: block; }
         <span class="nav-dot"><span class="nav-dot-halo" aria-hidden="true"></span><span class="nav-dot-core" aria-hidden="true"></span></span>
         <span class="nav-status-text">all systems normal</span>
       </p>
-      <a class="pill pill-lime pill-md" href="#start" data-lime-cta data-cursor="none">
+      <a class="pill pill-lime pill-md" href="#footer" data-lime-cta data-cursor="none">
         <span class="pill-lime-fill" aria-hidden="true"></span>
         <span class="pill-label">Start free</span>
         <span class="pill-lime-ink" aria-hidden="true">
@@ -2290,7 +2290,7 @@ R.mount(function () {
     <p class="hero-subhead" data-reveal="fade" data-delay="140">Relay runs the steps between your apps and only pings a person when it matters.</p>
 
     <div class="hero-actions" data-reveal="rise" data-delay="210">
-      <a class="pill pill-lime pill-lg" href="#start" data-lime-cta data-cursor="none">
+      <a class="pill pill-lime pill-lg" href="#footer" data-lime-cta data-cursor="none">
         <span class="pill-lime-fill" aria-hidden="true"></span>
         <span class="pill-label">Start free</span>
         <span class="pill-lime-ink" aria-hidden="true">
@@ -2298,7 +2298,7 @@ R.mount(function () {
         </span>
         <span class="stroke-ring pill-lime-ring" aria-hidden="true"></span>
       </a>
-      <a class="pill pill-glass pill-lg" href="#watch" data-glass-btn>
+      <a class="pill pill-glass pill-lg" href="#product" data-glass-btn>
         <span class="stroke-ring pill-glass-ring" aria-hidden="true"></span>
         <img class="hero-play" src="https://storage.getlayers.ai/assets/relay-4ee0729d77/hero/hero-play-icon.svg" alt="" width="16" height="16">
         Watch a build, 2 minutes
@@ -6782,7 +6782,7 @@ R.mount(function () {
       <span class="pricing-result-rule" aria-hidden="true"></span>
       <div class="pricing-included pricing-mono pricing-focus" data-focus="8" data-delay="450"><span class="pricing-swap" data-pricing-swap="included"><span>30,000 runs included</span></span></div>
     </div>
-    <a class="pill pill-lime pill-lg pricing-meter-cta" href="#start" data-lime-cta data-cursor="none">
+    <a class="pill pill-lime pill-lg pricing-meter-cta" href="#footer" data-lime-cta data-cursor="none">
       <span class="pill-lime-fill" aria-hidden="true"></span>
       <span class="pill-label">Start free</span>
       <span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
@@ -6814,11 +6814,11 @@ R.mount(function () {
         <span class="pricing-card-rule" aria-hidden="true"></span>
         <div class="pricing-look pricing-look-glass" data-look="glass">
           <span class="pricing-shade" aria-hidden="true"></span>
-          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#start" data-glass-tier data-cursor="none"><span>Start free</span><span class="pricing-glass-fill" aria-hidden="true">Start free</span></a></div>
+          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#footer" data-glass-tier data-cursor="none"><span>Start free</span><span class="pricing-glass-fill" aria-hidden="true">Start free</span></a></div>
         </div>
         <div class="pricing-look pricing-look-lime" data-look="lime">
           <div class="pricing-team-box" data-team-cta><span class="pricing-team-glow" aria-hidden="true"></span>
-            <a class="pill pill-lime" href="#start" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start free</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
+            <a class="pill pill-lime" href="#footer" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start free</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
           </div>
         </div>
       </article>
@@ -6840,11 +6840,11 @@ R.mount(function () {
         <span class="pricing-card-rule" aria-hidden="true"></span>
         <div class="pricing-look pricing-look-glass" data-look="glass">
           <span class="pricing-shade" aria-hidden="true"></span>
-          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#start" data-glass-tier data-cursor="none"><span>Start free</span><span class="pricing-glass-fill" aria-hidden="true">Start free</span></a></div>
+          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#footer" data-glass-tier data-cursor="none"><span>Start free</span><span class="pricing-glass-fill" aria-hidden="true">Start free</span></a></div>
         </div>
         <div class="pricing-look pricing-look-lime" data-look="lime">
           <div class="pricing-team-box" data-team-cta><span class="pricing-team-glow" aria-hidden="true"></span>
-            <a class="pill pill-lime" href="#start" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start free</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
+            <a class="pill pill-lime" href="#footer" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Start free</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Start free<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
           </div>
         </div>
       </article>
@@ -6865,11 +6865,11 @@ R.mount(function () {
         <span class="pricing-card-rule" aria-hidden="true"></span>
         <div class="pricing-look pricing-look-glass" data-look="glass">
           <span class="pricing-shade" aria-hidden="true"></span>
-          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#contact" data-glass-tier data-cursor="none"><span>Talk to us</span><span class="pricing-glass-fill" aria-hidden="true">Talk to us</span></a></div>
+          <div class="pricing-button-box"><a class="pricing-glass-btn" href="#footer" data-glass-tier data-cursor="none"><span>Talk to us</span><span class="pricing-glass-fill" aria-hidden="true">Talk to us</span></a></div>
         </div>
         <div class="pricing-look pricing-look-lime" data-look="lime">
           <div class="pricing-team-box" data-team-cta><span class="pricing-team-glow" aria-hidden="true"></span>
-            <a class="pill pill-lime" href="#contact" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Talk to us</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Talk to us<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
+            <a class="pill pill-lime" href="#footer" data-lime-cta data-cursor="none"><span class="pill-lime-fill" aria-hidden="true"></span><span class="pill-label">Talk to us</span><span class="pill-lime-ink" aria-hidden="true"><span class="pill-lime-ink-label">Talk to us<span class="pill-lime-chevrons"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 8l6 6-6 6" stroke="currentColor" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span><span class="stroke-ring pill-lime-ring" aria-hidden="true"></span></a>
           </div>
         </div>
       </article>
@@ -7632,10 +7632,10 @@ R.mount(function () {
     <div data-footer-cue="fade" data-footer-stage-of="top" data-footer-delay="540">
       <p id="footer-social-label" class="footer-social-label footer-mono">stay in touch</p>
       <ul class="footer-socials" aria-labelledby="footer-social-label">
-        <li><a class="footer-social footer-mono" href="#linkedin" aria-label="LinkedIn">in</a></li>
-        <li><a class="footer-social footer-mono" href="#x" aria-label="X">x</a></li>
-        <li><a class="footer-social footer-mono" href="#github" aria-label="GitHub">gh</a></li>
-        <li><a class="footer-social footer-mono" href="#discord" aria-label="Discord">dc</a></li>
+        <li><span class="footer-social footer-mono"  aria-label="LinkedIn" aria-disabled="true" title="Link not yet available">in</span></li>
+        <li><span class="footer-social footer-mono"  aria-label="X" aria-disabled="true" title="Link not yet available">x</span></li>
+        <li><span class="footer-social footer-mono"  aria-label="GitHub" aria-disabled="true" title="Link not yet available">gh</span></li>
+        <li><span class="footer-social footer-mono"  aria-label="Discord" aria-disabled="true" title="Link not yet available">dc</span></li>
       </ul>
     </div>
   </div>
@@ -7684,35 +7684,35 @@ R.mount(function () {
       <p id="footer-col-product" class="footer-col-title footer-mono">product</p>
       <ul aria-labelledby="footer-col-product">
         <li><a href="#product">Canvas</a></li>
-        <li><a href="#apps">Apps</a></li>
-        <li><a href="#run-history">Run history</a></li>
+        <li><a href="#integrations">Apps</a></li>
+        <li><a href="#product">Run history</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
     </div>
     <div class="footer-col" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="150">
       <p id="footer-col-learn" class="footer-col-title footer-mono">learn</p>
       <ul aria-labelledby="footer-col-learn">
-        <li><a href="#docs">Docs</a></li>
-        <li><a href="#templates">Templates</a></li>
-        <li><a href="#changelog">Changelog</a></li>
-        <li><a href="#status">Status</a></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Docs</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Templates</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Changelog</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Status</span></li>
       </ul>
     </div>
     <div class="footer-col" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="200">
       <p id="footer-col-company" class="footer-col-title footer-mono">company</p>
       <ul aria-labelledby="footer-col-company">
-        <li><a href="#about">About</a></li>
-        <li><a href="#careers">Careers</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><span  aria-disabled="true" title="Link not yet available">About</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Careers</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Security</span></li>
+        <li><a href="#footer">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col" data-footer-cue="rise" data-footer-stage-of="bottom" data-footer-delay="250">
       <p id="footer-col-legal" class="footer-col-title footer-mono">legal</p>
       <ul aria-labelledby="footer-col-legal">
-        <li><a href="#privacy">Privacy</a></li>
-        <li><a href="#terms">Terms</a></li>
-        <li><a href="#cookies">Cookies</a></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Privacy</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Terms</span></li>
+        <li><span  aria-disabled="true" title="Link not yet available">Cookies</span></li>
       </ul>
     </div>
   </nav>
