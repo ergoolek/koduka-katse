@@ -525,7 +525,39 @@ html[data-preload] [data-preloader] { display: block; }
   font: 500 13px/1.4 ui-monospace, monospace; background: #b3261e; color: #fff; text-align: center;
 }
 </style>
-<style>html{scroll-padding-top:100px}span[aria-disabled="true"]{cursor:default;opacity:.48}span[aria-disabled="true"]:hover{color:inherit!important}@media(max-width:580px){html{scroll-padding-top:72px}}</style></head>
+<style>html{scroll-padding-top:100px}span[aria-disabled="true"]{cursor:default;opacity:.48}span[aria-disabled="true"]:hover{color:inherit!important}@media(max-width:580px){html{scroll-padding-top:72px}}</style><style>
+/* BESTWEB: preserve the original Hero canvas, connector geometry and parallax */
+.hero-title{height:auto!important;overflow:visible!important;white-space:normal!important}
+.hero-title-wrap{height:auto!important;overflow:visible!important}
+.hero-title .display-title-accent{display:block}
+@media(min-width:1201px){
+.hero-title{font-size:clamp(2.45rem,3.45vw,3.15rem)!important;line-height:1.1!important;letter-spacing:-.045em}
+.hero-subhead{top:27rem!important}
+.hero-actions{top:34rem!important}
+.hero-note-wrap{top:38.75rem!important}
+}
+@media(min-width:901px) and (max-width:1200px){
+.hero-title{font-size:clamp(1.85rem,3.4vw,2.55rem)!important;line-height:1.12!important}
+.hero-subhead{top:26rem!important}
+.hero-actions{top:33rem!important}
+.hero-note-wrap{top:37.5rem!important}
+}
+@media(min-width:581px) and (max-width:900px){
+.hero-title{font-size:clamp(1.85rem,4.2vw,2.35rem)!important;line-height:1.08!important}
+.hero-title-wrap{top:5.2rem!important}
+.hero-subhead{top:14rem!important}
+.hero-actions{top:20.5rem!important}
+.hero-note-wrap{top:24.5rem!important}
+}
+@media(max-width:580px){
+.hero-title{font-size:clamp(1.65rem,7.2vw,2.2rem)!important;line-height:1.08!important}
+.hero-title-wrap{top:4.5rem!important}
+.hero-subhead{top:14.5rem!important}
+.hero-actions{top:22.5rem!important}
+.hero-note-wrap{top:30.5rem!important}
+}
+.hero-node-condition,.hero-node-approval,.hero-node-log,.hero-node-trigger{visibility:visible}
+</style></head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
      BESTWEB tile in the middle; a lime line runs round the edge of the screen
@@ -2103,7 +2135,7 @@ R.mount(function () {
 .hero-node-glow { box-shadow: var(--hero-elevation-node-glow); }
 .hero-node-title { font-size: var(--type-body); line-height: var(--line-body); font-weight: 500; color: var(--foreground); }
 .hero-node-source { color: var(--foreground-dim); }
-.hero-node-modern digital experience { top: 10.125rem; left: 10.5625rem; width: 13.125rem; }
+.hero-node-condition { top: 10.125rem; left: 10.5625rem; width: 13.125rem; }
 .hero-node-log { top: 20.125rem; left: 10.5625rem; width: 13.125rem; }
 .hero-node-approval { top: 15.125rem; left: 28.6875rem; width: 11.25rem; }
 .hero-node-trigger { top: 18rem; left: 40.625rem; width: 12.5rem; }
@@ -2177,7 +2209,7 @@ R.mount(function () {
   .hero-conn-narrow { display: block; }
   .hero-node { align-items: center; gap: 0; padding: .6875rem .9375rem; }
   .hero-node-title { font-size: var(--type-label); line-height: var(--line-label); }
-  .hero-node-modern digital experience { top: 16.0625rem; left: 3.0625rem; width: 11.75rem; }
+  .hero-node-condition { top: 16.0625rem; left: 3.0625rem; width: 11.75rem; }
   .hero-node-log { top: 16.0625rem; left: 17.3125rem; width: 11.75rem; }
   .hero-node-approval { top: 24.0625rem; left: 10.1875rem; width: 11.75rem; }
   .hero-node-trigger { top: 9.6875rem; left: 42rem; width: 11.75rem; }
@@ -2218,7 +2250,7 @@ R.mount(function () {
   .hero-conn-left { top: 11.875rem; left: 9.5625rem; height: 4rem; width: 13rem; }
   .hero-conn-right { top: 19.625rem; left: 9.5625rem; height: 4rem; width: 13rem; }
   .hero-node { padding-top: .5625rem; padding-bottom: .5625rem; }
-  .hero-node-modern digital experience { top: 15.875rem; left: 4.1875rem; width: 10.75rem; }
+  .hero-node-condition { top: 15.875rem; left: 4.1875rem; width: 10.75rem; }
   .hero-node-log { top: 15.875rem; left: 17.1875rem; width: 10.75rem; }
   .hero-node-approval { top: 23.625rem; left: 10.6875rem; width: 10.75rem; }
   .hero-node-trigger { top: 30.3125rem; left: 18.625rem; height: 3.75rem; width: 10.75rem; padding-top: .6875rem; }
@@ -2271,7 +2303,7 @@ R.mount(function () {
   .hero-runs { top: 30rem; left: 1.1875rem; width: 19.375rem; }
 }
 </style>
-<section id="hero" class="hero" aria-label="The handoffs run themselves.">
+<section id="hero" class="hero" aria-label="BESTWEB digital growth system">
   <div class="hero-frame">
     <!-- Window bloom 3488:21056 — follows the cursor by up to 60px -->
     <div class="hero-bloom-layer" data-depth="60">
@@ -2284,7 +2316,7 @@ R.mount(function () {
     </div>
 
     <div class="hero-title-wrap" data-reveal="rise" data-delay="70">
-      <h1 class="display-title hero-title" data-focus="10" data-delay="70">Your website should do more than just exist. <em class="display-title-accent">It should bring you customers</em>.</h1>
+      <h1 class="display-title hero-title" data-focus="10" data-delay="70">Your website should do more than just exist.<em class="display-title-accent"> It should bring you customers.</em></h1>
     </div>
 
     <p class="hero-subhead" data-reveal="fade" data-delay="140">We build the systems behind your digital growth — website, marketing and automation working together to turn attention into enquiries.</p>
@@ -2389,7 +2421,7 @@ R.mount(function () {
                     <g class="hero-packet-lime" opacity="0"><circle r="6" fill="var(--hero-packet-halo)"/><circle r="2.5" fill="var(--hero-packet)"/></g>
                     <g class="hero-packet-grey" opacity="0"><circle r="5" fill="var(--hero-packet-grey-halo)"/><circle r="2.25" fill="var(--hero-packet-grey)"/></g>
                   </svg>
-                  <div class="hero-node hero-node-glow hero-node-modern digital experience" data-node="472"><p class="hero-node-title">Website</p><p class="hero-node-source hero-mono hero-label">modern digital experience</p></div>
+                  <div class="hero-node hero-node-glow hero-node-condition" data-node="472"><p class="hero-node-title">Website</p><p class="hero-node-source hero-mono hero-label">modern digital experience</p></div>
                   <div class="hero-node hero-node-log" data-node="528"><p class="hero-node-title">New enquiry</p><p class="hero-node-source hero-mono hero-label">lead captured</p></div>
                   <div class="hero-node hero-node-approval" data-node="584"><p class="hero-node-title">Google + Meta Ads</p><p class="hero-node-source hero-mono hero-label">traffic running</p></div>
                   <div class="hero-wait-wrap" data-reveal="fade" data-delay="654">
@@ -2413,12 +2445,12 @@ R.mount(function () {
               <!-- Last runs -->
               <div class="hero-fill" data-reveal="fade" data-delay="288">
                 <span class="hero-runs-rule" aria-hidden="true"></span>
-                <p class="hero-runs-label hero-mono hero-label hero-nowrap">last runs</p>
+                <p class="hero-runs-label hero-mono hero-label hero-nowrap">recent activity</p>
               </div>
               <ul class="hero-runs hero-mono hero-label">
-                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time">09:41:02</span><span class="hero-run-name">refunds over 5000</span><span class="hero-run-duration">129 ms</span></li>
-                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:38:57</span><span class="hero-run-name">weekly export</span><span class="hero-run-duration">2.1 s</span></li>
-                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:31:14</span><span class="hero-run-name">invoice reminder</span><span class="hero-run-duration">410 ms</span></li>
+                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time">09:41:02</span><span class="hero-run-name">new enquiry</span><span class="hero-run-duration">129 ms</span></li>
+                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:38:57</span><span class="hero-run-name">Google Ads campaign</span><span class="hero-run-duration">2.1 s</span></li>
+                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:31:14</span><span class="hero-run-name">CRM follow-up</span><span class="hero-run-duration">410 ms</span></li>
               </ul>
             </div>
 
