@@ -8903,5 +8903,20 @@ if (canvas && !R.isBot()) whenBuildable(() => {
   })
 })
 </script>
-</body>
+<style id="relay-light-white-fix">
+/* Opaque black WebGL buffer + multiply blend was darkening the whole viewport.
+   Invert the buffer so its black clear colour becomes neutral white for multiply. */
+html,body,main{background:#fff!important;color:#18241a!important}
+:root{--background:#fff;--foreground:#18241a;--foreground-muted:#495c4d;--foreground-dim:#617165;--title-gradient-from:#142119;--title-gradient-to:#405447;--title-accent:#405a3b;--surface-glass:rgba(255,255,255,.8);--glass-slab:rgba(255,255,255,.72);--card-glass:rgba(255,255,255,.88)}
+#stream{mix-blend-mode:multiply!important;filter:invert(1) hue-rotate(180deg) saturate(.95)!important;opacity:.62!important}
+.backdrop-top,.backdrop-light,.backdrop-dots,.backdrop-specks,.backdrop-field,.backdrop-base,.backdrop-base-light{opacity:.08!important}
+.hero-bloom-layer{opacity:.08!important}
+.hero-subhead,.hero-note-text{color:#4d5d50!important}
+.hero-title,.hero-title .display-title-accent{color:#17261b!important}
+.hero-chip{background:rgba(255,255,255,.94)!important;color:#344733!important}
+.hero-window{background:rgba(255,255,255,.88)!important}
+.hero-window-box{color:#243728}
+.nav-shell{background:rgba(255,255,255,.92)!important}
+@media(prefers-reduced-motion:reduce){#stream{display:none!important}}
+</style></body>
 </html>
