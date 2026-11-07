@@ -8918,5 +8918,22 @@ html,body,main{background:#fff!important;color:#18241a!important}
 .hero-window-box{color:#243728}
 .nav-shell{background:rgba(255,255,255,.92)!important}
 @media(prefers-reduced-motion:reduce){#stream{display:none!important}}
+</style><style id="relay-light-stream-polish">
+/* Pastel light-mode stream: black WebGL clear -> white under multiply.
+   Compress contrast to remove dark knots, retain line geometry and motion. */
+#stream{
+  mix-blend-mode:multiply!important;
+  filter:invert(1) hue-rotate(180deg) saturate(.65) contrast(.38) brightness(1.25)!important;
+  opacity:.46!important;
+  mask-image:linear-gradient(to right,transparent 0%,#000 24%,#000 100%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 24%,#000 100%);
+}
+.hero-bloom-layer,.hero-bloom{opacity:0!important}
+.backdrop-light,.backdrop-dots,.backdrop-specks,.backdrop-field{opacity:.025!important}
+.hero-chip,.hero-chip-text{color:#385039!important}
+.hero-subhead,.hero-note-text{color:#435847!important}
+.hero-zoom,.hero-win-status,.hero-run-duration{color:#526452!important}
+.hero-window-ring{opacity:.28!important}
+@media(max-width:900px){#stream{opacity:.34!important;mask-image:none;-webkit-mask-image:none}}
 </style></body>
 </html>
