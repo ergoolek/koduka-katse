@@ -568,6 +568,21 @@ html[data-preload] [data-preloader] { display: block; }
  #integrations .integrations-rail{left:3rem;width:18.375rem}
  #integrations .integrations-packet{left:9.125rem}
 }
+</style><style id="hero-new-headline">
+/* Hero headline only — keep the original serif accent and reveal animation. */
+#hero .hero-heading-first,#hero .hero-heading-neon{display:block;white-space:nowrap}
+#hero .hero-heading-neon{
+  color:#c8f751!important;
+  -webkit-text-fill-color:#c8f751;
+  background:none!important;
+  text-shadow:0 0 24px rgba(200,247,81,.17);
+  font-family:var(--font-instrument-serif),Georgia,serif;
+  font-style:italic;
+  font-weight:400;
+}
+@media(width <= 1200px){#hero .hero-title{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.08}}
+@media(width <= 900px){#hero .hero-title{font-size:clamp(2.05rem,5vw,2.9rem);line-height:1.1}}
+@media(width <= 580px){#hero .hero-title{font-size:clamp(1.85rem,8.5vw,2.35rem);line-height:1.12}}
 </style></head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
@@ -2327,7 +2342,7 @@ R.mount(function () {
     </div>
 
     <div class="hero-title-wrap" data-reveal="rise" data-delay="70">
-      <h1 class="display-title hero-title" data-focus="10" data-delay="70">Koduleht, mis toob <em class="display-title-accent">tulemusi</em>.</h1>
+      <h1 class="display-title hero-title" data-focus="10" data-delay="70"><span class="hero-heading-first">Üks süsteem,</span><em class="display-title-accent hero-heading-neon">rohkem kliente.</em></h1>
     </div>
 
     <p class="hero-subhead" data-reveal="fade" data-delay="140">Me ehitame sinu ettevõttele tervikliku süsteemi, mis toob veebist rohkem päringuid, kliente ja müüki.</p>
