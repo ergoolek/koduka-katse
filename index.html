@@ -534,6 +534,12 @@ html[data-preload] [data-preloader] { display: block; }
   -webkit-clip-path:inset(0 0 0 0)!important;
   contain:paint;
 }
+</style><style id="hero-results-copy-only">
+/* Text-only adjustment; keep the existing animated row mechanics unchanged. */
+#hero .hero-runs .hero-run-time{display:none}
+#hero .hero-runs .hero-run-name{left:1.25rem;max-width:58%;overflow:hidden;text-overflow:ellipsis}
+#hero .hero-runs .hero-run-duration{right:0;white-space:pre;color:#c8f751;font-variant-numeric:tabular-nums}
+@media(max-width:580px){#hero .hero-runs .hero-run-name{max-width:50%;font-size:11px}#hero .hero-runs .hero-run-duration{font-size:10px}}
 </style></head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
@@ -2425,9 +2431,9 @@ R.mount(function () {
                 <p class="hero-runs-label hero-mono hero-label hero-nowrap">Tulemused · esimesed 1,5 kuud</p>
               </div>
               <ul class="hero-runs hero-mono hero-label">
-                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time">09:41:02</span><span class="hero-run-name">Kodulehe päring</span><span class="hero-run-duration">129 ms</span></li>
-                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:38:57</span><span class="hero-run-name">Reklaamikampaania</span><span class="hero-run-duration">2.1 s</span></li>
-                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:31:14</span><span class="hero-run-name">Automaatne järeltegevus</span><span class="hero-run-duration">410 ms</span></li>
+                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time"></span><span class="hero-run-name">Veebikülastused</span><span class="hero-run-duration">1 247  +68%</span></li>
+                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time"></span><span class="hero-run-name">Päringud</span><span class="hero-run-duration">34  +112%</span></li>
+                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time"></span><span class="hero-run-name">Hinnanguline väärtus</span><span class="hero-run-duration">€11 900  +215%</span></li>
               </ul>
             </div>
 
@@ -2667,14 +2673,14 @@ R.mount(function () {
   /* ── LiveRuns: a new run slides into the top every 4 s ─────────────────── */
   var runsEl = $('.hero-runs')
   var RUNS = [
-    { time: '09:41:02', name: 'refunds over 5000', duration: '129 ms', live: true },
-    { time: '09:38:57', name: 'weekly export', duration: '2.1 s', live: false },
-    { time: '09:31:14', name: 'invoice reminder', duration: '410 ms', live: false }
+    { time: '09:41:02', name: 'Veebikülastused', duration: '1 247  +68%', live: true },
+    { time: '09:38:57', name: 'Päringud', duration: '34  +112%', live: false },
+    { time: '09:31:14', name: 'Hinnanguline väärtus', duration: '€11 900  +215%', live: false }
   ]
   var POOL = [
-    { name: 'refunds over 5000', duration: '134 ms' }, { name: 'invoice reminder', duration: '388 ms' },
-    { name: 'refunds over 5000', duration: '121 ms' }, { name: 'weekly export', duration: '1.9 s' },
-    { name: 'refunds over 5000', duration: '142 ms' }, { name: 'invoice reminder', duration: '402 ms' }
+    { name: 'Veebikülastused', duration: '1 247  +68%' },
+    { name: 'Päringud', duration: '34  +112%' },
+    { name: 'Hinnanguline väärtus', duration: '€11 900  +215%' }
   ]
   var GAPS = [47, 73, 38, 91, 56]
   var toSeconds = function (t) { var p = t.split(':').map(Number); return p[0] * 3600 + p[1] * 60 + p[2] }
