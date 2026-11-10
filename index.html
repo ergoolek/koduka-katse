@@ -525,7 +525,16 @@ html[data-preload] [data-preloader] { display: block; }
   font: 500 13px/1.4 ui-monospace, monospace; background: #b3261e; color: #fff; text-align: center;
 }
 </style>
-</head>
+<style id="hero-stray-curves-only">
+/* Clip the two connector SVGs to their own geometry boxes.
+   The genuine lines between workflow cards stay inside these boxes. */
+#hero .hero-conn-left,
+#hero .hero-conn-right{
+  clip-path:inset(0 0 0 0)!important;
+  -webkit-clip-path:inset(0 0 0 0)!important;
+  contain:paint;
+}
+</style></head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
      Relay tile in the middle; a lime line runs round the edge of the screen
