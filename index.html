@@ -525,17 +525,7 @@ html[data-preload] [data-preloader] { display: block; }
   font: 500 13px/1.4 ui-monospace, monospace; background: #b3261e; color: #fff; text-align: center;
 }
 </style>
-<style id="hero-results-refinement">
-/* Keep only the workflow's real connector paths, clip any SVG overspill. */
-#hero .hero-conn{overflow:hidden}
-#hero .hero-conn svg{overflow:hidden}
-#hero .hero-runs .hero-run-time{display:none!important}
-#hero .hero-runs .hero-run-name{left:1.25rem!important;max-width:56%;overflow:hidden;text-overflow:ellipsis}
-#hero .hero-runs .hero-run-duration{right:0!important;color:#c8f751!important;font-variant-numeric:tabular-nums;white-space:pre}
-#hero .hero-runs .hero-run-3 .hero-run-duration{color:var(--foreground-muted)!important}
-#hero .hero-runs-label{white-space:nowrap}
-@media(max-width:580px){#hero .hero-runs .hero-run-name{max-width:53%;font-size:11px}#hero .hero-runs .hero-run-duration{font-size:10px}}
-</style></head>
+</head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
      Relay tile in the middle; a lime line runs round the edge of the screen
@@ -2423,12 +2413,12 @@ R.mount(function () {
               <!-- Last runs -->
               <div class="hero-fill" data-reveal="fade" data-delay="288">
                 <span class="hero-runs-rule" aria-hidden="true"></span>
-                <p class="hero-runs-label hero-mono hero-label hero-nowrap">Tulemused (esimesed 1,5 kuud)</p>
+                <p class="hero-runs-label hero-mono hero-label hero-nowrap">Tulemused · esimesed 1,5 kuud</p>
               </div>
               <ul class="hero-runs hero-mono hero-label">
-                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time"></span><span class="hero-run-name">Veebikülastused</span><span class="hero-run-duration">1 247  +68%</span></li>
-                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time"></span><span class="hero-run-name">Päringud</span><span class="hero-run-duration">34  +112%</span></li>
-                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time"></span><span class="hero-run-name">Hinnanguline väärtus</span><span class="hero-run-duration">€11 900  +215%</span></li>
+                <li class="hero-run hero-run-1" data-reveal="fade" data-delay="800"><span class="hero-run-dot hero-run-dot-live" aria-hidden="true"></span><span class="hero-run-time">09:41:02</span><span class="hero-run-name">Kodulehe päring</span><span class="hero-run-duration">129 ms</span></li>
+                <li class="hero-run hero-run-2" data-reveal="fade" data-delay="870"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:38:57</span><span class="hero-run-name">Reklaamikampaania</span><span class="hero-run-duration">2.1 s</span></li>
+                <li class="hero-run hero-run-3" data-reveal="fade" data-delay="940"><span class="hero-run-dot" aria-hidden="true"></span><span class="hero-run-time">09:31:14</span><span class="hero-run-name">Automaatne järeltegevus</span><span class="hero-run-duration">410 ms</span></li>
               </ul>
             </div>
 
@@ -2668,14 +2658,14 @@ R.mount(function () {
   /* ── LiveRuns: a new run slides into the top every 4 s ─────────────────── */
   var runsEl = $('.hero-runs')
   var RUNS = [
-    { time: '09:41:02', name: 'Veebikülastused', duration: '1 247  +68%', live: true },
-    { time: '09:38:57', name: 'Päringud', duration: '34  +112%', live: false },
-    { time: '09:31:14', name: 'Hinnanguline väärtus', duration: '€11 900  +215%', live: false }
+    { time: '09:41:02', name: 'refunds over 5000', duration: '129 ms', live: true },
+    { time: '09:38:57', name: 'weekly export', duration: '2.1 s', live: false },
+    { time: '09:31:14', name: 'invoice reminder', duration: '410 ms', live: false }
   ]
   var POOL = [
-    { name: 'Veebikülastused', duration: '1 247  +68%' },
-    { name: 'Päringud', duration: '34  +112%' },
-    { name: 'Hinnanguline väärtus', duration: '€11 900  +215%' }
+    { name: 'refunds over 5000', duration: '134 ms' }, { name: 'invoice reminder', duration: '388 ms' },
+    { name: 'refunds over 5000', duration: '121 ms' }, { name: 'weekly export', duration: '1.9 s' },
+    { name: 'refunds over 5000', duration: '142 ms' }, { name: 'invoice reminder', duration: '402 ms' }
   ]
   var GAPS = [47, 73, 38, 91, 56]
   var toSeconds = function (t) { var p = t.split(':').map(Number); return p[0] * 3600 + p[1] * 60 + p[2] }
