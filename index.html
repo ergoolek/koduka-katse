@@ -548,6 +548,26 @@ html[data-preload] [data-preloader] { display: block; }
 #integrations .integrations-caption,#integrations .integrations-caption-390{color:var(--foreground-muted)}
 @media(max-width:900px){#integrations .integrations-tile-label{font-size:11px;width:115px;max-width:115px}}
 @media(max-width:580px){#integrations .integrations-tile-label{font-size:10px;width:86px;max-width:86px}#integrations .integration-line-icon{width:25px;height:25px}}
+</style><style id="integrations-even-spacing">
+/* Match the 7-tile layout and the moving dotted rail at each frame size. */
+#integrations .integrations-row{left:5rem;gap:8.75rem}
+#integrations .integrations-rail{left:6.875rem;width:75rem}
+#integrations .integrations-packet{left:19.375rem}
+@media(width <= 1200px){
+ #integrations .integrations-row{left:3rem;gap:9.75rem}
+ #integrations .integrations-rail{left:4.875rem;width:54rem}
+ #integrations .integrations-packet{left:18.375rem}
+}
+@media(width <= 900px){
+ #integrations .integrations-row{left:2.5rem;gap:6.0625rem}
+ #integrations .integrations-rail{left:4.375rem;width:39.25rem}
+ #integrations .integrations-packet{left:14.1875rem}
+}
+@media(width <= 580px){
+ #integrations .integrations-row{left:1.25rem;gap:2.625rem}
+ #integrations .integrations-rail{left:3rem;width:18.375rem}
+ #integrations .integrations-packet{left:9.125rem}
+}
 </style></head>
 <body>
 <!-- ═══ PRELOADER (views/home/preloader.tsx) — a black screen with the lime
@@ -2913,10 +2933,10 @@ R.mount(function () {
 
   /* Geometry in section px, one set per Figma frame */
   var GEOMETRY = {
-    1440: { tile: 60, tileX: 80, pitch: 174, railX: 90, railW: 1260, rest: 217, dashOffset: 1 },
-    1024: { tile: 60, tileX: 48, pitch: 173.6, railX: 58, railW: 908, rest: 165, dashOffset: 0 },
-    768: { tile: 60, tileX: 40, pitch: 125.6, railX: 50, railW: 668, rest: 133, dashOffset: 0 },
-    390: { tile: 56, tileX: 20, pitch: 98, railX: 28, railW: 334, rest: 97, dashOffset: 0 },
+    1440: { tile: 60, tileX: 80, pitch: 200, railX: 110, railW: 1200, rest: 310, dashOffset: 1 },
+    1024: { tile: 60, tileX: 48, pitch: 216, railX: 78, railW: 864, rest: 294, dashOffset: 0 },
+    768: { tile: 60, tileX: 40, pitch: 157, railX: 70, railW: 628, rest: 227, dashOffset: 0 },
+    390: { tile: 56, tileX: 20, pitch: 98, railX: 48, railW: 294, rest: 146, dashOffset: 0 },
   }
   var DRAW_MS = 1760
   var easeInOut = function (t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2 }
